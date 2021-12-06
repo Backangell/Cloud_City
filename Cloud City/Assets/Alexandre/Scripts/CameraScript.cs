@@ -46,14 +46,14 @@ public class CameraScript : MonoBehaviour
             if ( go != null) // et qu'une case est déjà prise en référence
             {
                 go.GetComponent<GridScript>().Overlapping(false);//indique à la case qu'elle n'est plus touché
-                go = null;// retire la référence de la case
+                go = null;// retire la référence de la case            
             }
         }
     }
 
     void Onclick()
     {
-        if (go!=null && Input.GetButtonDown("Fire1"))//quand on survole une case et que l'on appuie sur le clickdroit
+        if (go!=null && Input.GetButtonDown("Fire1") && go.GetComponent<GridScript>().BoolB == true)//quand on survole une case et que l'on appuie sur le clickdroit
         {
             go.GetComponent<GridScript>().Exist = true;//permet de faire apparaitre les cases autours
         }
@@ -67,5 +67,8 @@ public class CameraScript : MonoBehaviour
 
         transform.position = new Vector3(transform.position.x + (movement.x*speed), transform.position.y , transform.position.z + (movement.y * speed));
     }
+
+    
+
 
 }

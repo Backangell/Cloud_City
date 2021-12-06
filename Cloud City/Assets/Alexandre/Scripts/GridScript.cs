@@ -8,15 +8,16 @@ public class GridScript : MonoBehaviour
     public bool Exist, overlap, BoolB;
     
     public List<Transform> positionVoisin;
-    public GameObject Case, interior;
+    public GameObject Case, interior, model;
 
+    
 
     // Start is called before the first frame update
     void Start()
     {
         Exist = false; //booléenne pour savoir si une case est occupé par une île
-        overlap = false;
-        BoolB = true;
+        overlap = false;//Quand la souris passe dessus
+        BoolB = true; // supprime l'interaction des case déjà utilisés
     }
     
 
@@ -28,8 +29,8 @@ public class GridScript : MonoBehaviour
         {
             spawnVoisin(); //fonction qui fait apparaitre le quadrillage non occupé par une île autour
             Destroy(interior);
-            Exist = false;
-            BoolB = false;
+            Exist = false;//Cette Booléenne sert à faire apparaitre des bâtiment
+            BoolB = false; //cette Booléenne sert à empêcher l'interaction après qu'on ai mis un bâtiment.
         }
         
     }
@@ -40,12 +41,15 @@ public class GridScript : MonoBehaviour
         {
             if (positionVoisin[a].GetComponent<Voisin>().disponible == true)//vérifie que les îles ne soient pas occupées
             {
-                GameObject oe = Instantiate(Case);//fais apparaitre une case
-                oe.GetComponent<GridScript>().Overlapping (false);
-                oe.transform.position = positionVoisin[a].position;//place la case
+                GameObject oe = Instantiate(Case); //fais apparaitre une case
+                oe.GetComponent<GridScript>().Overlapping (false); // 
+                oe.transform.position = positionVoisin[a].position; //place la case
             }
         }
-        
+
+
+        model.SetActive(true);
+        model.GetComponent<Model3D>().modelselction(Random.Range(0f,1f));
     }
     public void Overlapping(bool a)
     {
@@ -58,4 +62,9 @@ public class GridScript : MonoBehaviour
             interior.SetActive(false);
         }
     }
+    
+
+
+
+
 }

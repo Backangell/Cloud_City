@@ -21,6 +21,7 @@ public class Voisin : MonoBehaviour
     {
         if (other != null)
         {
+            //Debug.Log("OBJECT:" + gameObject.name +" Collide:" + other.name);
             disponible = false;
         }
         else

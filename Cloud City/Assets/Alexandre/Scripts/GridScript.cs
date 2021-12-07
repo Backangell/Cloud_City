@@ -5,8 +5,12 @@ using UnityEngine;
 public class GridScript : MonoBehaviour
 {
 
+    [Header("Ref")]
+    public GameManager sc_gameManager;
+
     public bool Exist, overlap, BoolB;
     
+    [Space]
     public List<Transform> positionVoisin;
     public GameObject Case, interior, model;
 
@@ -18,6 +22,10 @@ public class GridScript : MonoBehaviour
         Exist = false; //booléenne pour savoir si une case est occupé par une île
         overlap = false;//Quand la souris passe dessus
         BoolB = true; // supprime l'interaction des case déjà utilisés
+
+        sc_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+
     }
     
 
@@ -42,14 +50,18 @@ public class GridScript : MonoBehaviour
             if (positionVoisin[a].GetComponent<Voisin>().disponible == true)//vérifie que les îles ne soient pas occupées
             {
                 GameObject oe = Instantiate(Case); //fais apparaitre une case
+                vd_removelist(sc_gameManager);
                 oe.GetComponent<GridScript>().Overlapping (false); // 
                 oe.transform.position = positionVoisin[a].position; //place la case
+                
             }
         }
 
 
         model.SetActive(true);
         model.GetComponent<Model3D>().modelselction(Random.Range(0f,1f));
+
+        this.tag = "Untagged";
     }
     public void Overlapping(bool a)
     {
@@ -63,7 +75,17 @@ public class GridScript : MonoBehaviour
         }
     }
     
+    public void vd_removelist(GameManager manager)
+    {
+        
+        sc_gameManager.b_DoOnce = true; // refresh List
 
+        manager.gm_grid = gameObject;
+        manager.lst_Grid.Remove(gameObject);
+
+        manager.lst_iles.Add(this.gameObject);
+
+    }
 
 
 

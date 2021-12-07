@@ -641,6 +641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5629144433194403367}
+  - component: {fileID: 8001643360644536206}
   - component: {fileID: 8017780137500716495}
   - component: {fileID: 7710446125848433831}
   - component: {fileID: 7222349236601874004}
@@ -675,6 +676,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &8001643360644536206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614818444461231964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a26225cf299204fb8e71da8d962c04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sc_manager: {fileID: 0}
+  i_poids: 1
 --- !u!114 &8017780137500716495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,6 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c89decb1f85acb4e846f2ac88d8cc26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sc_gameManager: {fileID: 0}
   Exist: 0
   overlap: 0
   BoolB: 0
@@ -924,7 +940,7 @@ GameObject:
   - component: {fileID: 849989832599814472}
   m_Layer: 0
   m_Name: Model3D
-  m_TagString: Untagged
+  m_TagString: Ile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

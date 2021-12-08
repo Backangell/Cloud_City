@@ -6,9 +6,9 @@ public class ile_Poids : MonoBehaviour
 {
     public GameManager sc_manager;
 
-    public int i_poids = 1;
+    public float i_poids = 1f;
 
-
+    public Vector3 v3rotate = new Vector3(4f,0,0);
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +19,9 @@ public class ile_Poids : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(sc_manager.b_DoOnce)
-       {
-
-       }
+       
+       this.gameObject.transform.eulerAngles += v3rotate;
+       Debug.Log(this.gameObject.transform.localEulerAngles);
+       
     }
 }

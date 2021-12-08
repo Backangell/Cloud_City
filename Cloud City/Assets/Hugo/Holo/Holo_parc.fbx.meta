@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 953723a706b7e1a4ab2ced946bffa648
+guid: 65e3c24935b9ca3468b53b89e9082120
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,23 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Blanc
-    second: {fileID: 2100000, guid: 9a70dc4cf86ff79469a94eb5616f4a32, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Blanc wireframe
-    second: {fileID: 2100000, guid: b53738ba0dd0bd148a1ef2f75c6b9832, type: 2}
+    second: {fileID: 2100000, guid: 550e858a9ba98424b9bb1896aa3769d9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Couleur
-    second: {fileID: 2100000, guid: 971792a3ac32f014c968f3c036c4f6c6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Couleur wireframe
-    second: {fileID: 2100000, guid: 74c9038691d4c0344bf7cc0fff355994, type: 2}
+    second: {fileID: 2100000, guid: 384b38163200586439fa56180e1fb440, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

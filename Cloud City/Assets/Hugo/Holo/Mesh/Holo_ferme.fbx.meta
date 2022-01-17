@@ -2,12 +2,15 @@ fileFormatVersion: 2
 guid: 5a69a048ed1cf3646a3dd9f170f88089
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Blanc wireframe
+      name: Blanc
     second: {fileID: 2100000, guid: 550e858a9ba98424b9bb1896aa3769d9, type: 2}
   - first:
       type: UnityEngine:Material

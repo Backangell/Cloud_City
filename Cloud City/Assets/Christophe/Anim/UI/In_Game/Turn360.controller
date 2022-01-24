@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Turn360
-  m_Speed: 0.6
+  m_Speed: 0.05
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -111,9 +111,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.6828647
-  m_TransitionOffset: 0.07228921
-  m_ExitTime: 0.5804879
+  m_TransitionDuration: 0.7999606
+  m_TransitionOffset: 0
+  m_ExitTime: 0.5148205
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grid_Jonathan : MonoBehaviour
+public class GridScript : MonoBehaviour
 {
 
     [Header("Ref")]
@@ -43,7 +43,6 @@ public class Grid_Jonathan : MonoBehaviour
             spawnVoisin(); //fonction qui fait apparaitre le quadrillage non occupé par une île autour
             //sc_poids.vd_CheckMultiplicateur();// Check multiplicateurs des voisins
             Destroy(interior);
-
             
             Exist = false;//Cette Booléenne sert à faire apparaitre des bâtiment
             BoolB = false; //cette Booléenne sert à empêcher l'interaction après qu'on ai mis un bâtiment.
@@ -65,11 +64,12 @@ public class Grid_Jonathan : MonoBehaviour
         }
         vd_removelist(sc_gameManager);
 
-        //sc_gameManager.b_ApplyRota = true;
+        sc_gameManager.b_ApplyRota = true;
 
         model.SetActive(true);
         model.GetComponent<Model3D>().modelselction(Random.Range(0f,1f));
 
+        this.tag = "Untagged";
     }
     public void Overlapping(bool a)
     {

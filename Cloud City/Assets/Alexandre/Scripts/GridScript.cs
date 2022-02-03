@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Grid_Jonathan : MonoBehaviour
 {
+    [Space]
+    public string st_name;
 
     [Header("Ref")]
     public GameManager sc_gameManager;
@@ -17,12 +19,16 @@ public class Grid_Jonathan : MonoBehaviour
     [Space, Space]
 
     public ile_Poids sc_poids;
+    public CameraScript sc_cam;
 
     
 
     // Start is called before the first frame update
     void Start()
     {
+
+        sc_cam = GetComponent<CameraScript>();
+
         Exist = false; //booléenne pour savoir si une case est occupé par une île
         overlap = false;//Quand la souris passe dessus
         BoolB = true; // supprime l'interaction des case déjà utilisés
@@ -31,6 +37,7 @@ public class Grid_Jonathan : MonoBehaviour
 
         gm_CaseStock = GameObject.Find("CaseStock");
         sc_poids = gameObject.GetComponent<ile_Poids>();
+        
     }
     
 
@@ -38,21 +45,23 @@ public class Grid_Jonathan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Exist) 
         {
             spawnVoisin(); //fonction qui fait apparaitre le quadrillage non occupé par une île autour
             //sc_poids.vd_CheckMultiplicateur();// Check multiplicateurs des voisins
             Destroy(interior);
-
+ 
             
             Exist = false;//Cette Booléenne sert à faire apparaitre des bâtiment
             BoolB = false; //cette Booléenne sert à empêcher l'interaction après qu'on ai mis un bâtiment.
-            sc_gameManager.b_ApplyRota = true;
+            
         }
     }
 
     private void spawnVoisin()
-    {   
+    {
+        
         for (int a = 5; a >= 0; a--) //il y a 6 possibilité d'île
         {
             if (positionVoisin[a].GetComponent<Voisin>().disponible == true)//vérifie que les îles ne soient pas occupées
@@ -63,6 +72,8 @@ public class Grid_Jonathan : MonoBehaviour
                 oe.transform.position = positionVoisin[a].position; //place la case  
             }
         }
+
+        
         vd_removelist(sc_gameManager);
 
         //sc_gameManager.b_ApplyRota = true;
@@ -73,7 +84,7 @@ public class Grid_Jonathan : MonoBehaviour
     }
     public void Overlapping(bool a)
     {
-        if(a & BoolB)
+        if (a & BoolB)
         { 
             interior.SetActive(true);
         }
@@ -81,6 +92,7 @@ public class Grid_Jonathan : MonoBehaviour
         {
             interior.SetActive(false);
         }
+        vd_applyrot();
     }
     
     public void vd_removelist(GameManager manager)
@@ -95,6 +107,13 @@ public class Grid_Jonathan : MonoBehaviour
 
     }
 
+    public void vd_applyrot()
+    {
+        
+        ile_Poids sc_ile;
+        sc_ile = this.gameObject.GetComponent<ile_Poids>();
 
+        sc_ile.b_applyrot = true;
+    }
 
 }

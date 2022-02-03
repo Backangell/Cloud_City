@@ -5,6 +5,21 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    #region Singleton
+    static GameManager instance;
+    public static GameManager Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindObjectOfType<GameManager>();
+            return instance;
+        }
+    }
+    #endregion
+
+
+
     public GameObject Starter;
 
     [Header("List")]
@@ -35,18 +50,20 @@ public class GameManager : MonoBehaviour
     [Space,Space]
 
     public GameObject go_start;
-    public GameObject go_RotX;
-    public GameObject go_RotZ;
+    float f_startX;
+    float f_startZ;
+
 
     void Start()
     {
         Starter = GameObject.Find(name);
-        go_RotX = GameObject.Find("RotX");
-        go_RotZ = GameObject.Find("RotZ");
     }
 
     void Update()
     {
+        f_startX = go_start.transform.rotation.eulerAngles.x;
+        f_startZ = go_start.transform.rotation.eulerAngles.z;
+
         if(b_DoOnce)
         {
             vd_refreshList();
@@ -55,13 +72,19 @@ public class GameManager : MonoBehaviour
 
     public void vd_MyRot(float x, float z)
     {
-        //go_start.transform.eulerAngles = new Vector3(x, 0, z);
-        //go_RotX.transform.eulerAngles = new Vector3(x, 0, 0);
-        //go_RotZ.transform.eulerAngles = new Vector3(0, 0, z);
-        //Debug.Log(x + ("     ") + z);
+        //Remettre le bon sens de rotations des Axes.
+        //Modulo est là pour délimiter que la rotation soirs compris entre 
+        float f_finalonZ = (f_startZ - x + 180f) % 360f - 180f;
+        float f_finalonX = (f_startX + z + 180f ) % 360f - 180f;
 
-        go_start = go_RotX.transform.position.z;
+        if (Mathf.Abs(f_finalonX) <= 1f)
+            f_finalonX = 0f;
+        if (Mathf.Abs(f_finalonZ) <= 1f)
+            f_finalonZ = 0f;
 
+        go_start.transform.eulerAngles = new Vector3(f_finalonX , 0, f_finalonZ);
+        //Debug.Log("f_OnX:  "+x + "     " + "f_OnZ:  " + z);
+        //print("Rotate en X:   " + f_finalonX + "      " + "Rotate en Z:   " + f_finalonZ);
     }
 
     void vd_refreshList()
@@ -85,10 +108,6 @@ public class GameManager : MonoBehaviour
         b_DoOnce = false;
     }
 
-    void vd_ApplyPresison(List<GameObject> Grid,List<GameObject>Iles ,GameObject Start)
-    {
-        FindObjectsOfType<GameObject>();
-    }
 
 
 

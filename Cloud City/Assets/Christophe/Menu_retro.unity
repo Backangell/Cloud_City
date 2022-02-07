@@ -968,7 +968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.17608643, b: 0.3018868, a: 1}
+  m_Color: {r: 0.7830189, g: 0.15436137, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1392,6 +1392,7 @@ GameObject:
   - component: {fileID: 1581342249}
   - component: {fileID: 1581342251}
   - component: {fileID: 1581342250}
+  - component: {fileID: 1581342252}
   m_Layer: 5
   m_Name: Game_Title
   m_TagString: Untagged
@@ -1415,8 +1416,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.4349, y: 237}
-  m_SizeDelta: {x: 1819.431, y: 549.028}
+  m_AnchoredPosition: {x: -2.435, y: 237}
+  m_SizeDelta: {x: 1733.001, y: 785.388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1581342250
 MonoBehaviour:
@@ -1431,14 +1432,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.77254903, g: 0.7363504, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2062778f073729145a38977d1560bf87, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37870c61a7f0a8a42822d0f57d73349e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1456,6 +1457,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581342248}
   m_CullTransparentMesh: 1
+--- !u!95 &1581342252
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581342248}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da02ea2b68064bd4eaa85449b524c520, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1643198829
 GameObject:
   m_ObjectHideFlags: 0

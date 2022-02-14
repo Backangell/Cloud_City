@@ -56,12 +56,12 @@ public class CameraScript : MonoBehaviour
         if (go!=null && Input.GetButtonDown("Fire1") && go.GetComponent<GridScript>().BoolB == true)//quand on survole une case et que l'on appuie sur le clickdroit
         {
             go.GetComponent<GridScript>().Exist = true;//permet de faire apparaitre les cases autours
+            go.GetComponent<ile_Poids>().b_applyrot = true;
         }
     }
 
     void Moving()
     {
-        
         movement.x= Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 

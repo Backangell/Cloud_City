@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+   
     #region Singleton
     static GameManager instance;
     public static GameManager Instance
@@ -17,8 +18,6 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
-
-
 
     public GameObject Starter;
 
@@ -40,7 +39,9 @@ public class GameManager : MonoBehaviour
     [Space]
     [Header("Rotation")]
 
+    public int i_difficulty = 1;
     public bool b_ApplyRota = false;
+    public bool b_bomber = false;
 
     [Space]
     [Header("Tableau Hit")]
@@ -53,10 +54,15 @@ public class GameManager : MonoBehaviour
     float f_startX;
     float f_startZ;
 
+    [Space, Space]
+
+    private ile_multiplicateur sc_mult;
 
     void Start()
     {
         Starter = GameObject.Find(name);
+        sc_mult = gameObject.GetComponent<ile_multiplicateur>();
+
     }
 
     void Update()
@@ -77,9 +83,9 @@ public class GameManager : MonoBehaviour
         float f_finalonZ = (f_startZ - x + 180f) % 360f - 180f;
         float f_finalonX = (f_startX + z + 180f ) % 360f - 180f;
 
-        if (Mathf.Abs(f_finalonX) <= 1f)
+        if (Mathf.Abs(f_finalonX) <= i_difficulty)
             f_finalonX = 0f;
-        if (Mathf.Abs(f_finalonZ) <= 1f)
+        if (Mathf.Abs(f_finalonZ) <= i_difficulty)
             f_finalonZ = 0f;
 
         go_start.transform.eulerAngles = new Vector3(f_finalonX , 0, f_finalonZ);
@@ -108,7 +114,18 @@ public class GameManager : MonoBehaviour
         b_DoOnce = false;
     }
 
+    public void vd_retirerpoids( float x, float z)
+    {
+        float f_finalonZ = (f_startZ + x + 180f) % 360f - 180f;
+        float f_finalonX = (f_startX - z + 180f) % 360f - 180f;
 
+        if (Mathf.Abs(f_finalonX) <= i_difficulty)
+            f_finalonX = 0f;
+        if (Mathf.Abs(f_finalonZ) <= i_difficulty)
+            f_finalonZ = 0f;
 
+        go_start.transform.eulerAngles = new Vector3(f_finalonX, 0, f_finalonZ);
+
+    }
 
 }

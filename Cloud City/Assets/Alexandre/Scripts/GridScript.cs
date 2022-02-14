@@ -76,7 +76,7 @@ public class Grid_Jonathan : MonoBehaviour
         
         vd_removelist(sc_gameManager);
 
-        //sc_gameManager.b_ApplyRota = true;
+        
 
         model.SetActive(true);
         model.GetComponent<Model3D>().modelselction(Random.Range(0f,1f));
@@ -92,7 +92,6 @@ public class Grid_Jonathan : MonoBehaviour
         {
             interior.SetActive(false);
         }
-        vd_applyrot();
     }
     
     public void vd_removelist(GameManager manager)
@@ -107,13 +106,6 @@ public class Grid_Jonathan : MonoBehaviour
 
     }
 
-    public void vd_applyrot()
-    {
-        
-        ile_Poids sc_ile;
-        sc_ile = this.gameObject.GetComponent<ile_Poids>();
-
-        sc_ile.b_applyrot = true;
-    }
+   
 
 }

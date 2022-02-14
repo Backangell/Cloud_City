@@ -6,6 +6,9 @@ public class Voisin : MonoBehaviour
 {
     public bool disponible; //disponibe, vérifie si le voisin est une case libre ou occ
 
+    public GameObject gm_identity;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +20,7 @@ public class Voisin : MonoBehaviour
     {
         
     }
+
     private void OnTriggerEnter (Collider other) // quand le voisin touche une île la case devient indisponible
     {
         if (other != null)

@@ -7,7 +7,7 @@ public class ile_Poids : MonoBehaviour
     [Space]
     [Header("Poids sur Axe")]
     [Space]
-    public float f_monpoids;
+    public float f_monpoids = 10;
 
     [Space]
 
@@ -18,9 +18,9 @@ public class ile_Poids : MonoBehaviour
     public float f_OnX;
     public float f_OnZ;
 
-    public float f_multiplucateur = 1f;
+    [Space,Header("Multiplicateur")]
 
-    //private float f_RangeHit = 0.5f;
+    public float f_multiplucateur = 1f;
     //private float f_WeakHits = 100f;
 
     [Space]
@@ -29,6 +29,7 @@ public class ile_Poids : MonoBehaviour
 
     [Space]
 
+    public bool b_applybomb = false;
     public bool b_applyrot = false;
 
     [Space]
@@ -73,7 +74,15 @@ public class ile_Poids : MonoBehaviour
     {
         vd_Ratio(f_posX, f_posZ, f_monpoids);
         vd_CheckSign(f_posX, f_posZ);
-        GameManager.Instance.vd_MyRot(f_OnX, f_OnZ);
+        vd_CheckMultiplicateur(f_multiplucateur);
+
+        //s'il sagit d'une explosion
+        //NON: c'est juste une application d'une tuile sur une partie
+            GameManager.Instance.vd_MyRot(f_OnX, f_OnZ);
+        
+        //OUI: Alors on fait l'opération inverse
+       
+
         b_applyrot = false;
     }
 
@@ -94,9 +103,14 @@ public class ile_Poids : MonoBehaviour
         f_OnZ *= Mathf.Sign(z);
     }
 
-    public void vd_CheckMultiplicateur()
+    public void vd_CheckMultiplicateur(float f_multiplicateur)
     {
-        
+      // Faire des Raycasts sur les voisins
+      // Prendre le résultats
+      // Faire +1 ?
+    
     }
+
+   
     
 }

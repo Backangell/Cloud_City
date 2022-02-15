@@ -7,7 +7,8 @@ public class ModelScriptAlex : MonoBehaviour
     public GameManagerAlex GM;
 
     public GameObject Rouge, Bleu, Vert, Jaune, module, BombeBleue,BombeVerte,BombeJaune,BombeRouge;
-    
+     
+
     public List<GameObject> allConnections;
 
     // Start is called before the first frame update
@@ -26,7 +27,6 @@ public class ModelScriptAlex : MonoBehaviour
     {
         if (!GM.Bombe)
         {
-
             if (couleur == 1)
             {
                 module = Bleu;
@@ -44,6 +44,7 @@ public class ModelScriptAlex : MonoBehaviour
                 module = Rouge;
             }
         }
+
         else
         {
             if (couleur == 1)
@@ -72,7 +73,11 @@ public class ModelScriptAlex : MonoBehaviour
             Go.SetActive(true);            
         }
         
-        
+    }
+
+    public void AnimSpawn()
+    {
+        module.GetComponent<Animator>().SetTrigger("POSE");
     }
 
     public void disableModel()

@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disponible: 1
+  gm_identity: {fileID: 0}
 --- !u!1 &1237568268419118924
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disponible: 1
+  gm_identity: {fileID: 0}
 --- !u!1 &4702236588524646080
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disponible: 1
+  gm_identity: {fileID: 0}
 --- !u!1 &5340115939094347025
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disponible: 1
+  gm_identity: {fileID: 0}
 --- !u!1 &5788607567708962883
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disponible: 1
+  gm_identity: {fileID: 0}
 --- !u!1 &6614818444461231964
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,8 +693,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a26225cf299204fb8e71da8d962c04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sc_manager: {fileID: 0}
-  i_poids: 1
+  f_monpoids: 10
+  f_posX: 0
+  f_posZ: 0
+  v3rotate: {x: 0, y: 0, z: 0}
+  f_OnX: 0
+  f_OnZ: 0
+  f_multiplucateur: 1
+  sc_cam: {fileID: 0}
+  b_applybomb: 0
+  b_applyrot: 0
+  gm_hitsvoisins: []
 --- !u!114 &8017780137500716495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,6 +730,7 @@ MonoBehaviour:
   Case: {fileID: 6614818444461231964}
   interior: {fileID: 1237568268419118924}
   model: {fileID: 8038831280778397696}
+  sc_poids: {fileID: 0}
 --- !u!212 &7710446125848433831
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -925,6 +940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disponible: 1
+  gm_identity: {fileID: 0}
 --- !u!1 &8038831280778397696
 GameObject:
   m_ObjectHideFlags: 0

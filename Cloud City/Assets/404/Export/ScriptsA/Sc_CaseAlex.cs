@@ -28,6 +28,7 @@ public class Sc_CaseAlex : MonoBehaviour
         GM = GameObject.Find("Main Camera Alexandre").GetComponent<GameManagerAlex>();
 
         IsOverlap = false; //booléenne pour savoir si une case est occupé par une île
+
     }
 
    
@@ -158,7 +159,10 @@ public class Sc_CaseAlex : MonoBehaviour
             }
 
             GM.BatActualToNext();
-        }       
+        }
+
+        Modele.GetComponent<ModelScriptAlex>().AnimSpawn();
+
     }
 
     public void AddConexion(GameObject Go)

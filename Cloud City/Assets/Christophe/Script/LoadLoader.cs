@@ -18,13 +18,17 @@ public class LoadLoader : MonoBehaviour
 
     IEnumerator LoadAsynchronously (int sceneIndex)
     {
+        yield return null;
+
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
         loadingScreen.SetActive(true);
 
         while (!operation.isDone)
         {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
+            float progress = Mathf.Clamp01(operation.progress / 0.12f);
+
+            if (progress > 1) progress = 1;
 
             slider.value = progress;
             progressText.text = progress * 100f + "%";

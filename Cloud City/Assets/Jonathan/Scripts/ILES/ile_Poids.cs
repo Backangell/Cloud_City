@@ -32,8 +32,8 @@ public class ile_Poids : MonoBehaviour
     public bool b_applybomb = false;
     public bool b_applyrot = false;
 
-    [Space]
-    public List<GameObject> gm_hitsvoisins = new List<GameObject>();
+    
+    
 
 
     void Start()
@@ -79,11 +79,8 @@ public class ile_Poids : MonoBehaviour
         //s'il sagit d'une explosion
         //NON: c'est juste une application d'une tuile sur une partie
             GameManager.Instance.vd_MyRot(f_OnX, f_OnZ);
-        
-        //OUI: Alors on fait l'opération inverse
-       
+            
 
-        b_applyrot = false;
     }
 
     void vd_CheckSign(float x, float z)
@@ -111,6 +108,13 @@ public class ile_Poids : MonoBehaviour
     
     }
 
-   
-    
+   IEnumerator nm_waiting(float wait)
+   {
+        print(wait);
+        yield return new WaitForSeconds(wait);
+        
+       
+    }
+
+
 }

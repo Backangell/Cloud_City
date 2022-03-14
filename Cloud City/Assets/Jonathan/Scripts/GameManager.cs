@@ -56,6 +56,11 @@ public class GameManager : MonoBehaviour
 
     [Space, Space]
 
+    private float f_applyonX;
+    private float f_applyonZ;
+
+    [Space, Space]
+
     private ile_multiplicateur sc_mult;
 
     void Start()
@@ -74,23 +79,38 @@ public class GameManager : MonoBehaviour
         {
             vd_refreshList();
         }
+        
     }
 
     public void vd_MyRot(float x, float z)
     {
         //Remettre le bon sens de rotations des Axes.
         //Modulo est là pour délimiter que la rotation soirs compris entre 
-        float f_finalonZ = (f_startZ - x + 180f) % 360f - 180f;
-        float f_finalonX = (f_startX + z + 180f ) % 360f - 180f;
+          float f_finalonZ = (f_startZ - x + 180f) % 360f - 180f;
+          float f_finalonX = (f_startX + z + 180f ) % 360f - 180f;
+       // float f_smoothtime = 0.8f;
 
-        if (Mathf.Abs(f_finalonX) <= i_difficulty)
-            f_finalonX = 0f;
-        if (Mathf.Abs(f_finalonZ) <= i_difficulty)
-            f_finalonZ = 0f;
+       // Vector3 v3_target = new Vector3(x, 0, z);
+        //Vector3 v3_velocity = new Vector3(100, 0, 100);
 
-        go_start.transform.eulerAngles = new Vector3(f_finalonX , 0, f_finalonZ);
-        //Debug.Log("f_OnX:  "+x + "     " + "f_OnZ:  " + z);
-        //print("Rotate en X:   " + f_finalonX + "      " + "Rotate en Z:   " + f_finalonZ);
+        //Vector3 v3_start = new Vector3(go_start.transform.position.x, 0, go_start.transform.position.z);
+
+        //Appel coroutine
+        //StartCoroutine(nm_smoothrot(v3_start, v3_target, v3_velocity, f_smoothtime));
+    }
+
+    public void vd_rot(float x,float z)
+    {
+        print("vd_rot");
+        Vector3 v3_start = new Vector3(transform.position.x,0,transform.position.z);
+        Vector3 v3_target = new Vector3(x, 0, z);
+
+        if (Mathf.Abs(x) <= i_difficulty)
+            x = 0f;
+        if (Mathf.Abs(z) <= i_difficulty)
+            z = 0f;
+
+        go_start.transform.eulerAngles = Vector3.Lerp(v3_start,v3_target,2);
     }
 
     void vd_refreshList()
@@ -126,6 +146,31 @@ public class GameManager : MonoBehaviour
 
         go_start.transform.eulerAngles = new Vector3(f_finalonX, 0, f_finalonZ);
 
+    }
+
+    IEnumerator nm_smoothrot(Vector3 start ,Vector3 target , Vector3 velocity ,float time)
+    {
+        //Set de la rotation
+        Vector3 v3_smooth = Vector3.SmoothDamp(start, target, ref velocity, time);
+
+        //Application de la rotation
+        go_start.transform.eulerAngles = v3_smooth;
+
+        yield return new WaitForSeconds(time);
+
+        //Debug
+        print("Apply");
+
+        while(time<0){
+            yield return null;
+        }
+        print(time);
+        print(b_ApplyRota);
+        //Finition de la coroutine
+        b_ApplyRota = false;
+
+        StopAllCoroutines();
+           
     }
 
 }

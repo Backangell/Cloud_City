@@ -84,33 +84,29 @@ public class GameManager : MonoBehaviour
 
     public void vd_MyRot(float x, float z)
     {
+        if (Mathf.Abs(x) <= i_difficulty)
+            x = 0f;
+
+        if (Mathf.Abs(z) <= i_difficulty)
+            z = 0f;
+
         //Remettre le bon sens de rotations des Axes.
         //Modulo est là pour délimiter que la rotation soirs compris entre 
-          float f_finalonZ = (f_startZ - x + 180f) % 360f - 180f;
-          float f_finalonX = (f_startX + z + 180f ) % 360f - 180f;
-       // float f_smoothtime = 0.8f;
+        float f_finalonX = (f_startX + x) % 360f;
+        float f_finalonZ = (f_startZ + z) % 360f;
 
-       // Vector3 v3_target = new Vector3(x, 0, z);
-        //Vector3 v3_velocity = new Vector3(100, 0, 100);
+        Vector3 v3_start = new Vector3(f_startX, 0, f_startZ);
+        Vector3 v3_target = new Vector3(f_finalonX, 0, f_finalonZ);
 
-        //Vector3 v3_start = new Vector3(go_start.transform.position.x, 0, go_start.transform.position.z);
+       StartCoroutine(nm_smoothrot(Quaternion.Euler(v3_start), Quaternion.Euler(v3_target), 0.2f));
 
-        //Appel coroutine
-        //StartCoroutine(nm_smoothrot(v3_start, v3_target, v3_velocity, f_smoothtime));
+
     }
 
     public void vd_rot(float x,float z)
     {
-        print("vd_rot");
-        Vector3 v3_start = new Vector3(transform.position.x,0,transform.position.z);
-        Vector3 v3_target = new Vector3(x, 0, z);
-
-        if (Mathf.Abs(x) <= i_difficulty)
-            x = 0f;
-        if (Mathf.Abs(z) <= i_difficulty)
-            z = 0f;
-
-        go_start.transform.eulerAngles = Vector3.Lerp(v3_start,v3_target,2);
+        
+        
     }
 
     void vd_refreshList()
@@ -148,29 +144,28 @@ public class GameManager : MonoBehaviour
 
     }
 
-    IEnumerator nm_smoothrot(Vector3 start ,Vector3 target , Vector3 velocity ,float time)
+    IEnumerator nm_smoothrot(Quaternion start, Quaternion target, float timeDuration)
     {
-        //Set de la rotation
-        Vector3 v3_smooth = Vector3.SmoothDamp(start, target, ref velocity, time);
+        float f_elapsedTime = 0f;
 
-        //Application de la rotation
-        go_start.transform.eulerAngles = v3_smooth;
+        while (f_elapsedTime < timeDuration)
+        {
 
-        yield return new WaitForSeconds(time);
+            f_elapsedTime += Time.deltaTime;
 
-        //Debug
-        print("Apply");
+            float f_smoothTime = Mathf.SmoothStep(0, 1, f_elapsedTime / timeDuration);
 
-        while(time<0){
+            Quaternion v3_smoothRot = Quaternion.Lerp(start, target, f_smoothTime);
+
+            go_start.transform.rotation = v3_smoothRot;
+
             yield return null;
-        }
-        print(time);
-        print(b_ApplyRota);
-        //Finition de la coroutine
-        b_ApplyRota = false;
 
-        StopAllCoroutines();
-           
+        }
+
+        go_start.transform.rotation = target;
+
     }
+
 
 }

@@ -25,19 +25,18 @@ public class ile_Poids : MonoBehaviour
 
     [Space]
 
-    public CameraScript sc_cam;
+    public CameraScriptAlex sc_cam;
 
     [Space]
 
     public bool b_applybomb = false;
     public bool b_applyrot = false;
 
-    [Space]
-    public List<GameObject> gm_hitsvoisins = new List<GameObject>();
-
 
     void Start()
     {
+        sc_cam = Camera.main.GetComponent<CameraScriptAlex>();
+
         f_posX = transform.position.x;
         f_posZ = transform.position.z;
 
@@ -72,13 +71,15 @@ public class ile_Poids : MonoBehaviour
 
     public void vd_ApplyPoids()
     {
+
+
         vd_Ratio(f_posX, f_posZ, f_monpoids);
         vd_CheckSign(f_posX, f_posZ);
         vd_CheckMultiplicateur(f_multiplucateur);
 
         //s'il sagit d'une explosion
         //NON: c'est juste une application d'une tuile sur une partie
-            GameManager.Instance.vd_MyRot(f_OnX, f_OnZ);
+        GameManagerAlex.Instance.vd_MyRot(f_OnX, f_OnZ);
         
         //OUI: Alors on fait l'opération inverse
        

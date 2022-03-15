@@ -26,7 +26,6 @@ public class Grid_Jonathan : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         sc_cam = GetComponent<CameraScript>();
 
         Exist = false; //booléenne pour savoir si une case est occupé par une île

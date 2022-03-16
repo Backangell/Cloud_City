@@ -162,7 +162,7 @@ public class Sc_CaseAlex : MonoBehaviour
 
             
 
-            sc_poid.vd_ApplyPoids();
+            //sc_poid.vd_ApplyPoids();
 
             GM.BatActualToNext();
 

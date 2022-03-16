@@ -203,60 +203,6 @@ Transform:
   m_Father: {fileID: 543450652516985125}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1119491296
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1119491298}
-  - component: {fileID: 1119491297}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1119491297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119491296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ae11821303db048a0bae20de126e3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Starter: {fileID: 0}
-  lst_iles: []
-  gm_iles: {fileID: 0}
-  lst_Grid: []
-  gm_grid: {fileID: 0}
-  b_DoOnce: 1
-  i_difficulty: 1
-  b_ApplyRota: 0
-  b_bomber: 0
-  hit_voisins: []
-  go_start: {fileID: 1683967769}
---- !u!4 &1119491298
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119491296}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.936199, y: -0.38405493, z: 14.772791}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1263560996
 GameObject:
   m_ObjectHideFlags: 0
@@ -10036,6 +9982,67 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 5, z: 0.20000005}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &7322963030837877700
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7322963029804633892, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322963029804633893, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: go_start
+      value: 
+      objectReference: {fileID: 1683967769}
+    - target: {fileID: 7322963029804633894, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322963029804633894, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.936199
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322963029804633894, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.38405493
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322963029804633894, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.772791
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322963029804633894, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322963029804633894, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322963029804633894, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322963029804633894, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322963029804633894, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322963029804633894, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322963029804633894, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
 --- !u!4 &7324338552865338115
 Transform:
   m_ObjectHideFlags: 0
@@ -11469,14 +11476,13 @@ MonoBehaviour:
   f_monpoids: 0
   f_posX: 0
   f_posZ: 0
-  v3rotate: {x: 0, y: 0, z: 0}
   f_OnX: 0
   f_OnZ: 0
   f_multiplucateur: 1
   sc_cam: {fileID: 0}
+  sc_gamemanager: {fileID: 0}
   b_applybomb: 0
   b_applyrot: 0
-  gm_hitsvoisins: []
 --- !u!114 &8001643359017397260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11492,14 +11498,13 @@ MonoBehaviour:
   f_monpoids: 0
   f_posX: 0
   f_posZ: 0
-  v3rotate: {x: 0, y: 0, z: 0}
   f_OnX: 0
   f_OnZ: 0
   f_multiplucateur: 1
   sc_cam: {fileID: 0}
+  sc_gamemanager: {fileID: 0}
   b_applybomb: 0
   b_applyrot: 0
-  gm_hitsvoisins: []
 --- !u!114 &8001643359088190732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11515,14 +11520,13 @@ MonoBehaviour:
   f_monpoids: 0
   f_posX: 0
   f_posZ: 0
-  v3rotate: {x: 0, y: 0, z: 0}
   f_OnX: 0
   f_OnZ: 0
   f_multiplucateur: 1
   sc_cam: {fileID: 0}
+  sc_gamemanager: {fileID: 0}
   b_applybomb: 0
   b_applyrot: 0
-  gm_hitsvoisins: []
 --- !u!114 &8001643359270161537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11538,14 +11542,13 @@ MonoBehaviour:
   f_monpoids: 0
   f_posX: 0
   f_posZ: 0
-  v3rotate: {x: 0, y: 0, z: 0}
   f_OnX: 0
   f_OnZ: 0
   f_multiplucateur: 1
   sc_cam: {fileID: 0}
+  sc_gamemanager: {fileID: 0}
   b_applybomb: 0
   b_applyrot: 0
-  gm_hitsvoisins: []
 --- !u!114 &8001643359273387559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11561,14 +11564,13 @@ MonoBehaviour:
   f_monpoids: 0
   f_posX: 0
   f_posZ: 0
-  v3rotate: {x: 0, y: 0, z: 0}
   f_OnX: 0
   f_OnZ: 0
   f_multiplucateur: 1
   sc_cam: {fileID: 0}
+  sc_gamemanager: {fileID: 0}
   b_applybomb: 0
   b_applyrot: 0
-  gm_hitsvoisins: []
 --- !u!114 &8001643359334480888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11584,14 +11586,13 @@ MonoBehaviour:
   f_monpoids: 0
   f_posX: 0
   f_posZ: 0
-  v3rotate: {x: 0, y: 0, z: 0}
   f_OnX: 0
   f_OnZ: 0
   f_multiplucateur: 1
   sc_cam: {fileID: 0}
+  sc_gamemanager: {fileID: 0}
   b_applybomb: 0
   b_applyrot: 0
-  gm_hitsvoisins: []
 --- !u!114 &8001643359614096862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11607,14 +11608,13 @@ MonoBehaviour:
   f_monpoids: 0
   f_posX: 0
   f_posZ: 0
-  v3rotate: {x: 0, y: 0, z: 0}
   f_OnX: 0
   f_OnZ: 0
   f_multiplucateur: 1
   sc_cam: {fileID: 0}
+  sc_gamemanager: {fileID: 0}
   b_applybomb: 0
   b_applyrot: 0
-  gm_hitsvoisins: []
 --- !u!114 &8001643359716176832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11630,14 +11630,13 @@ MonoBehaviour:
   f_monpoids: 0
   f_posX: 0
   f_posZ: 0
-  v3rotate: {x: 0, y: 0, z: 0}
   f_OnX: 0
   f_OnZ: 0
   f_multiplucateur: 1
   sc_cam: {fileID: 0}
+  sc_gamemanager: {fileID: 0}
   b_applybomb: 0
   b_applyrot: 0
-  gm_hitsvoisins: []
 --- !u!114 &8001643359775850163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11653,14 +11652,13 @@ MonoBehaviour:
   f_monpoids: 0
   f_posX: 0
   f_posZ: 0
-  v3rotate: {x: 0, y: 0, z: 0}
   f_OnX: 0
   f_OnZ: 0
   f_multiplucateur: 1
   sc_cam: {fileID: 0}
+  sc_gamemanager: {fileID: 0}
   b_applybomb: 0
   b_applyrot: 0
-  gm_hitsvoisins: []
 --- !u!114 &8001643360139633298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11676,14 +11674,13 @@ MonoBehaviour:
   f_monpoids: 0
   f_posX: 0
   f_posZ: 0
-  v3rotate: {x: 0, y: 0, z: 0}
   f_OnX: 0
   f_OnZ: 0
   f_multiplucateur: 1
   sc_cam: {fileID: 0}
+  sc_gamemanager: {fileID: 0}
   b_applybomb: 0
   b_applyrot: 0
-  gm_hitsvoisins: []
 --- !u!114 &8001643360149839387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11699,14 +11696,13 @@ MonoBehaviour:
   f_monpoids: 0
   f_posX: 0
   f_posZ: 0
-  v3rotate: {x: 0, y: 0, z: 0}
   f_OnX: 0
   f_OnZ: 0
   f_multiplucateur: 1
   sc_cam: {fileID: 0}
+  sc_gamemanager: {fileID: 0}
   b_applybomb: 0
   b_applyrot: 0
-  gm_hitsvoisins: []
 --- !u!114 &8001643360463739570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11722,14 +11718,13 @@ MonoBehaviour:
   f_monpoids: 0
   f_posX: 0
   f_posZ: 0
-  v3rotate: {x: 0, y: 0, z: 0}
   f_OnX: 0
   f_OnZ: 0
   f_multiplucateur: 1
   sc_cam: {fileID: 0}
+  sc_gamemanager: {fileID: 0}
   b_applybomb: 0
   b_applyrot: 0
-  gm_hitsvoisins: []
 --- !u!23 &8011453931305539127
 MeshRenderer:
   m_ObjectHideFlags: 0

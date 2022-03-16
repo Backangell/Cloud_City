@@ -37,11 +37,11 @@ public class Sc_Camera_808 : MonoBehaviour
                 hit.collider.gameObject.GetComponent<Sc_Case_808>().IsOverlap == false &&//vérifie que la case n'est pas déjà sous la souris
                 hit.collider.gameObject.GetComponent<Sc_Case_808>().OQP == false //vérifie que la case n'est pas déjà Occupé
                 )
-            {
-                
-                GM.Selection(hit.collider.gameObject);//rajoute l'objet comme étant selectionné.
+            {                
+                GM.Selection(hit.collider.gameObject); //rajoute l'objet comme étant selectionné.
             }
         }
+
         else
         {
             GM.Selection(null);//rajoute l'objet comme étant selectionné.

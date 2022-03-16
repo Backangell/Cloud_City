@@ -102,15 +102,8 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void vd_rot(float x,float z)
-    {
-        
-        
-    }
-
     void vd_refreshList()
     {
-
         lst_Grid.Clear();
         lst_iles.Clear();
 

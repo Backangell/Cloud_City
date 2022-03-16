@@ -88,10 +88,10 @@ Material:
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DistortionBlend: 0.5
+    - _DistortionBlend: 0.806
     - _DistortionEnabled: 0
-    - _DistortionStrength: 1
-    - _DistortionStrengthScaled: 0
+    - _DistortionStrength: 10
+    - _DistortionStrengthScaled: 1
     - _DstBlend: 10
     - _EmissionEnabled: 0
     - _EnvironmentReflections: 1

@@ -10,6 +10,8 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public GameObject Case;
 
+    public Sc_Overlay Overlay;
+
     public List<GameObject> lst_Modules;
     public List<GameObject> lst_undead;
     public List<GameObject> lst_Case;
@@ -17,13 +19,6 @@ public class Sc_GameManager_808 : MonoBehaviour
     public List<GameObject> lst_comboDone;
 
     public bool Combo;
-
-
-
-    [Header("ExplosionEnChaîne")]
-    
-    public List<GameObject> lst_fall;
-    public List<GameObject> lst_comboToDo;
     
     [Header("ActualBat")]
 
@@ -37,14 +32,16 @@ public class Sc_GameManager_808 : MonoBehaviour
     public int ProchaineCouleur;
     public bool prochainEstBombe;
 
+    [Header("HoldBat")]
+
+    public List<int> ConnexionHold;
+    public int couleurHold;
+    public bool BombeHold , HoldEmpty;
+
     // Start is called before the first frame update
     void Start()
     {
-
-        
-
-
-
+        HoldEmpty = true;
         NextBat();
         BatActualToNext();
     }
@@ -61,11 +58,18 @@ public class Sc_GameManager_808 : MonoBehaviour
         if (Input.GetMouseButtonDown(0) & Case!=null)
         {
             Case.GetComponent<Sc_Case_808>().OnClick();
-            
         }
 
         if (Input.GetMouseButtonDown(1))
         {
+            #region HoldPiece
+
+            HoldBat();
+
+            #endregion
+
+            #region create Bomb
+            /*
             if (Bombe == true)
             {
                 Bombe = false;
@@ -74,13 +78,15 @@ public class Sc_GameManager_808 : MonoBehaviour
             {
                 Bombe = true;
             }
+            */
+            #endregion
         }
     }
 
     public void NextBat()// créer la liste des connexion du prochain batiment à poser
     {
-        #region couleur?
-        couleurActuelle = Random.Range(1, 5);//couleur aléatoire
+        #region definir la prochaine couleur
+        ProchaineCouleur = Random.Range(1, 5);//couleur aléatoire
         #endregion
 
         #region est une bombe? 
@@ -97,9 +103,9 @@ public class Sc_GameManager_808 : MonoBehaviour
         }
         #endregion
 
-        #region definir les connexions
+        #region definir les prochaines connexions
         
-        linkNb = (Random.Range(1, 7)); //Nombre de connexions
+        linkNb = (Random.Range(2, 7)); //Nombre de connexions
 
         List<int> Xlist = new List<int>(); //génére la list des connexions
 
@@ -118,13 +124,19 @@ public class Sc_GameManager_808 : MonoBehaviour
         ProchaineConnexion = Xlist; // la liste est fini
 
         #endregion
+
+        Overlay.Actuel(Connexion, couleurActuelle, Bombe);
+        Overlay.Next(ProchaineConnexion, ProchaineCouleur, prochainEstBombe);
+
+
     }
 
     public void BatActualToNext() // remplace le 
     {
-        couleurActuelle = ProchaineCouleur;
 
         Connexion = ProchaineConnexion;
+
+        couleurActuelle = ProchaineCouleur;
         
         Bombe = prochainEstBombe;
 
@@ -146,28 +158,39 @@ public class Sc_GameManager_808 : MonoBehaviour
         }
     }
 
-    /*
-    public IEnumerator  verif_Combo()
+    public void HoldBat()
     {
-        yield return new WaitForSeconds(0.1f);
+        List<int> A = Connexion;
+        int C = couleurActuelle;
+        bool B = Bombe;
 
-        
-        foreach(GameObject Go in lst_comboToDo)
+        if (HoldEmpty)
         {
-            Go_Sc.Explosion();
+            ConnexionHold = A;
+            couleurHold =  C;            
+            BombeHold = B;
+
+            BatActualToNext();
+
+            HoldEmpty = false;
         }
-    }
-    
-    void switchcolor()
-    {
-        
-        if (Input.GetAxis("Mouse ScrollWheel")>0)
+
+        else
         {
-            couleurActuelle++;
+            #region actuel to hold
+            Connexion = ConnexionHold;
+            couleurActuelle = couleurHold;
+            Bombe = BombeHold;
+            #endregion
+
+            #region hold to actuel
+            ConnexionHold = A;
+            couleurHold = C;
+            BombeHold = B;
+            #endregion
         }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
-        {
-            couleurActuelle--;
-        }
-    }*/
+
+        Overlay.Actuel(Connexion, couleurActuelle, Bombe);
+        Overlay.Hold(ConnexionHold, couleurHold, BombeHold);
+    }    
 }

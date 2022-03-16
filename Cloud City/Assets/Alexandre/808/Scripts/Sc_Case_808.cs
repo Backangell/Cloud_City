@@ -12,6 +12,8 @@ public class Sc_Case_808 : MonoBehaviour
     public bool Posable;    //les connexions sont bien relié
     public bool Bomb;
 
+    ile_Poids Sc_pds;
+
     public int color, rang;
 
     public GameObject verif, interior, module, Model;
@@ -40,7 +42,12 @@ public class Sc_Case_808 : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {       
+    {
+        
+        GM.lst_Case.Add(gameObject);
+        
+
+        Sc_pds = GetComponent<ile_Poids>();
         anim = GetComponent<Animator>();
         Dead = true;
         SetVoisin();        
@@ -136,13 +143,10 @@ public class Sc_Case_808 : MonoBehaviour
     }
     #endregion
 
-    #region 3DModel
+    #region 3DModel_Connexions
 
     void PrévisualisationOn(List<int> xList)
     {
-
-
-
         GameObject G;
 
         foreach (int X in xList)
@@ -165,7 +169,8 @@ public class Sc_Case_808 : MonoBehaviour
     #region rotation
     public void RotationPièce(float x)
     {
-        //Rot_Bool = false;
+        Posable = false;
+
         #region Valeur de rotation
         if (x > 0)
         {
@@ -191,8 +196,6 @@ public class Sc_Case_808 : MonoBehaviour
     }
     void Rot_Verif()
     {
-        Posable = false;
-
         foreach (int x in GM.Connexion)
         {
             if (lst_seConnect.Contains(lst_Voisin[x]))
@@ -210,6 +213,8 @@ public class Sc_Case_808 : MonoBehaviour
         Sc_Case_808 Sc_Voisin;
         GM.lst_Modules.Add(gameObject);
         OQP = true; IsOverlap = false;
+        
+        Sc_pds.vd_ApplyPoids(1);
 
         foreach (int x in GM.Connexion)
         {
@@ -233,6 +238,7 @@ public class Sc_Case_808 : MonoBehaviour
                     {
                         Sc_Voisin.lst_seConnect.Add(gameObject);
                     }
+
                     if (lst_Voisin[x].GetComponent<Sc_Case_808>().lst_connecté.Contains(gameObject))
                     {
                         lst_DoubleCo.Add(lst_Voisin[x]);
@@ -251,7 +257,11 @@ public class Sc_Case_808 : MonoBehaviour
         
         Bomb = GM.Bombe;
         
+        anim.ResetTrigger("Fall");
+        anim.ResetTrigger("Explode");
         anim.SetTrigger("Bool");
+
+        interior.SetActive(false);
 
         GM.BatActualToNext();
         GM.Case = null;
@@ -261,11 +271,6 @@ public class Sc_Case_808 : MonoBehaviour
     #region voisin_lst_gestion
     void SetVoisin()
     {
-        if (!GM.lst_Case.Contains(gameObject))
-        {
-            GM.lst_Case.Add(gameObject);
-        }
-
         foreach (Vector3 V3 in lst_voisinPositions) // pour chaque position dans la liste des positions
         {
             #region récupèrer l'objet
@@ -279,7 +284,7 @@ public class Sc_Case_808 : MonoBehaviour
             #region le rajoute la liste des voisin
             if (Col.Length > 0 && !lst_Voisin.Contains(Col[0].gameObject))
             {
-                lst_Voisin.Add(Col[0].gameObject);
+                lst_Voisin.Add(Col[0].gameObject); 
 
                 if (Col[0].CompareTag ("Center") && !lst_seConnect.Contains(Col[0].gameObject))
                 {
@@ -288,9 +293,7 @@ public class Sc_Case_808 : MonoBehaviour
 
                     if (Dead)
                     {
-                        SetAlive(false);
-                        
-                        
+                        SetAlive(false);                        
                     }
                 }
             }
@@ -349,7 +352,6 @@ public class Sc_Case_808 : MonoBehaviour
                 {
                     GM.lst_comboDone.Clear();                    
                     Go_Sc.Ancrée(true, null);
-
                 }
             }
         }
@@ -416,37 +418,44 @@ public class Sc_Case_808 : MonoBehaviour
 
         if (!ancrée)
         {
-            anim.SetTrigger("Fall");
-            
-            
+            anim.SetTrigger("Fall");                       
         }
         return ancrée;
     }
 
     void Destrouir()
     {
+        Sc_pds.vd_ApplyPoids(-1);
+
         #region disparition modèle
         OQP = false; Bomb = false;  color = 0;
-        
+       
         Destroy(Model);
 
         foreach (GameObject Go in lst_Connexion)
         {
             Go.SetActive(false);
         }
+
+        resetfunction();
+
+
         #endregion
 
-        foreach ( GameObject Go in lst_connecté)
-        {
+        foreach(GameObject Go in lst_connecté)
+        {            
             if (Go.CompareTag("Case"))
             {
                 Go.GetComponent<Sc_Case_808>().lst_seConnect.Remove(gameObject);
-
                 Go.GetComponent<Sc_Case_808>().resetfunction();
             }            
         }
 
+        lst_connecté.Clear();
+        lst_DoubleCo.Clear();
+
         anim.SetTrigger("Reset");
+
     }
 
 
@@ -457,6 +466,12 @@ public class Sc_Case_808 : MonoBehaviour
             Dead = true;
             interior.SetActive(false);
         }
+
+        else if (lst_seConnect.Count > 0 && !OQP)
+        {
+            interior.SetActive(true);
+        }
+
         Posable = false;
     }
 

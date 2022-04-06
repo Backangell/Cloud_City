@@ -9,7 +9,7 @@ public class Sc_Camera_808 : MonoBehaviour
     Vector3 point;
 
     RaycastHit hit;
-
+    public GameObject cible;
     public Sc_GameManager_808 GM;
 
     // Start is called before the first frame update
@@ -21,25 +21,25 @@ public class Sc_Camera_808 : MonoBehaviour
     void Update()
     {
         point = cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0f, 0f, cam.nearClipPlane));
-
-        Raycast();
+        if (!GM.lost)
+        {
+            Raycast();
+        }
     }
 
     public void Raycast()
-    {       
-
-        if (Physics.Raycast(transform.position, point - transform.position, out hit)) //le raycast touche quelque chose
+    {               
+        if (Physics.Raycast(transform.position, point - transform.position, out hit) )
         {
-
+            cible = hit.collider.gameObject;
 
             if (hit.collider.gameObject.CompareTag ("Case") &&
-                hit.collider.gameObject.GetComponent<Sc_Case_808>().Dead == false && //verifie que la case est vivante
-                hit.collider.gameObject.GetComponent<Sc_Case_808>().IsOverlap == false &&//vérifie que la case n'est pas déjà sous la souris
-                hit.collider.gameObject.GetComponent<Sc_Case_808>().OQP == false //vérifie que la case n'est pas déjà Occupé
-                )
-            {                
+            hit.collider.gameObject.GetComponent<Sc_Case_808>().Dead == false && //verifie que la case est vivante
+            hit.collider.gameObject.GetComponent<Sc_Case_808>().IsOverlap == false &&//vérifie que la case n'est pas déjà sous la souris
+            hit.collider.gameObject.GetComponent<Sc_Case_808>().OQP == false) //vérifie que la case n'est pas déjà Occupé) //on active la nouvelle) //le raycast touche quelque chose        
+            {
                 GM.Selection(hit.collider.gameObject); //rajoute l'objet comme étant selectionné.
-            }
+            }            
         }
 
         else

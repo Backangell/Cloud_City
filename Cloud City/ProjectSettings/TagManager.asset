@@ -7,6 +7,8 @@ TagManager:
   - case
   - Start
   - Ile
+  - Case
+  - Center
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - UI
   - TriggerVoisin
   - 3DUI
-  - 
+  - ContoursBox
   - 
   - 
   - 

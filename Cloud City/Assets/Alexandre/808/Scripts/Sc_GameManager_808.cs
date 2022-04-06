@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Sc_GameManager_808 : MonoBehaviour
 {
     public int linkNb;
@@ -11,6 +11,7 @@ public class Sc_GameManager_808 : MonoBehaviour
     public GameObject Case;
 
     public Sc_Overlay Overlay;
+    public Light light;
 
     public List<GameObject> lst_Modules;
     public List<GameObject> lst_undead;
@@ -18,8 +19,9 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public List<GameObject> lst_comboDone;
 
-    public bool Combo;
-    
+    public bool combo , lost;
+    public int  combo_Timer, combo_Mult, score;
+
     [Header("ActualBat")]
 
     public List<int> Connexion;
@@ -41,6 +43,8 @@ public class Sc_GameManager_808 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lost = false;
+        score = 0;
         HoldEmpty = true;
         NextBat();
         BatActualToNext();
@@ -65,6 +69,11 @@ public class Sc_GameManager_808 : MonoBehaviour
             #region HoldPiece
 
             HoldBat();
+            if(Case!= null)
+            {
+                Case.GetComponent<Sc_Case_808>().OutOverlapping();
+                Case.GetComponent<Sc_Case_808>().OnOverlap();
+            }
 
             #endregion
 
@@ -80,6 +89,20 @@ public class Sc_GameManager_808 : MonoBehaviour
             }
             */
             #endregion
+        }
+
+        if (lost)
+        {
+            light.intensity= light.intensity + 2 ;
+        }
+
+        if (combo_Timer > 0)
+        {
+            combo_Timer--;
+        }
+        else
+        {
+            combo_Mult = 1;
         }
     }
 
@@ -127,13 +150,10 @@ public class Sc_GameManager_808 : MonoBehaviour
 
         Overlay.Actuel(Connexion, couleurActuelle, Bombe);
         Overlay.Next(ProchaineConnexion, ProchaineCouleur, prochainEstBombe);
-
-
     }
 
     public void BatActualToNext() // remplace le 
     {
-
         Connexion = ProchaineConnexion;
 
         couleurActuelle = ProchaineCouleur;
@@ -152,7 +172,7 @@ public class Sc_GameManager_808 : MonoBehaviour
 
         Case = Go;
 
-        if (Go != null) //on active la nouvelle
+        if (Go != null)            
         {
             Go.GetComponent<Sc_Case_808>().OnOverlap();
         }
@@ -193,4 +213,27 @@ public class Sc_GameManager_808 : MonoBehaviour
         Overlay.Actuel(Connexion, couleurActuelle, Bombe);
         Overlay.Hold(ConnexionHold, couleurHold, BombeHold);
     }    
+
+    public IEnumerator EndRoutine()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Combo()
+    {
+        combo_Mult++;         
+        combo_Timer = 600; //reset le timer
+    }
+
+    public void Score(int x)
+    {
+        score = score + (x * combo_Mult);      
+        if (combo_Mult > 1)
+        {
+            combo_Timer = 600; //reset le timer
+        }
+        
+
+    }
 }

@@ -56,6 +56,7 @@ public class Sc_Case_808 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
     }
 
@@ -325,9 +326,11 @@ public class Sc_Case_808 : MonoBehaviour
 
     public void Detonation()
     {
+        GM.Score(15*rang);
+
         if (Bomb)
-        {
-            anim.SetTrigger("Explode");
+        {            
+            anim.SetTrigger("Explode");            
         }
     }
 
@@ -335,6 +338,8 @@ public class Sc_Case_808 : MonoBehaviour
     public void Explosion()
     {
         vérifiés.Clear();
+        GM.Combo();
+
 
         foreach (GameObject Go in lst_DoubleCo)
         {

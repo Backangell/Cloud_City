@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1473957642798594501}
   FX: {fileID: 0}
+  Case: {fileID: 0}
 --- !u!1 &1473957643404047664
 GameObject:
   m_ObjectHideFlags: 0
@@ -14938,7 +14939,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 1.3
       minScalar: 1
       maxCurve:
         serializedVersion: 2

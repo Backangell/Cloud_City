@@ -1303,7 +1303,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0.07058824}
+        key0: {r: 1, g: 1, b: 1, a: 0.09803922}
         key1: {r: 1, g: 1, b: 1, a: 0}
         key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -43666,6 +43666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 8532400696894895355}
   FX: {fileID: 0}
+  Case: {fileID: 0}
 --- !u!1 &8532400697279225612
 GameObject:
   m_ObjectHideFlags: 0

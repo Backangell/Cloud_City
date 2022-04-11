@@ -8,8 +8,8 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public float BombChance;
 
-    public GameObject Case;
-
+    public GameObject Case, EndScreen;
+    
     public Sc_Overlay Overlay;
     public Light light;
 
@@ -19,7 +19,7 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public List<GameObject> lst_comboDone;
 
-    public bool combo , lost;
+    public bool combo , lost, play;
     public int  combo_Timer, combo_Mult, score;
 
     [Header("ActualBat")]
@@ -43,6 +43,7 @@ public class Sc_GameManager_808 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        play = false;
         lost = false;
         score = 0;
         HoldEmpty = true;
@@ -105,6 +106,11 @@ public class Sc_GameManager_808 : MonoBehaviour
             combo_Mult = 1;
         }
     }
+    /*public void begin()
+    {
+        play = true;
+    }*/
+
 
     public void NextBat()// créer la liste des connexion du prochain batiment à poser
     {
@@ -216,8 +222,27 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public IEnumerator EndRoutine()
     {
+        play = false;
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //Endscreen();
+        SwitchScene(1);
+    }
+
+    public void SwitchScene(int x)
+    {
+        if (x == 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if (x == 2)
+        {
+            SceneManager.LoadScene("Menu_retro");
+        }
+
+    }
+    void Endscreen()
+    {
+        EndScreen.SetActive(true);
     }
 
     public void Combo()

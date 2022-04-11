@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sc_3DEffect : MonoBehaviour
 {
     public Animator anim;
-    public GameObject FX;
+    public GameObject FX, Case;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,7 @@ public class Sc_3DEffect : MonoBehaviour
 
     private void OnEnable()
     {
-        
+
     }
 
     public void spawn()
@@ -23,6 +23,24 @@ public class Sc_3DEffect : MonoBehaviour
         GetComponent<Animator>().SetTrigger("POSE");
     }
 
+    public IEnumerator Explosion()
+    {
+        GetComponent<Animator>().SetTrigger("EXPLOSE");
+        yield return new WaitForSeconds(0.5f);
+        Case.GetComponent<Sc_Case_808>().Explosion();
+    }
+
+    public void detruireGo()
+    {
+        Destroy(gameObject);
+    }
+
+    public void detruireConn()
+    {
+        Case.GetComponent<Sc_Case_808>().réequilibre();
+        Case.GetComponent<Sc_Case_808>().destroyConnexion();
+    }
+    
     public void DestructionFX()
     {
         FX.SetActive(true);

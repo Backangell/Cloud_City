@@ -244,6 +244,13 @@ public class Sc_Case_808 : MonoBehaviour
                     {
                         lst_DoubleCo.Add(lst_Voisin[x]);
                         lst_Voisin[x].GetComponent<Sc_Case_808>().lst_DoubleCo.Add(gameObject);
+                        
+                        if (lst_Voisin[x].GetComponent<Sc_Case_808>().color == color)
+                        {
+                            lst_Connexion[x].GetComponent<Sc_connexion>().function(true, color);
+                            int i = lst_Voisin[x].GetComponent<Sc_Case_808>().lst_Voisin.IndexOf(gameObject);
+                            lst_Voisin[x].GetComponent<Sc_Case_808>().lst_Connexion[i].GetComponent<Sc_connexion>().function(true, color);
+                        }
                     }
 
                 }
@@ -257,7 +264,8 @@ public class Sc_Case_808 : MonoBehaviour
         }
         
         Bomb = GM.Bombe;
-        
+        Model.GetComponent<Sc_3DEffect>().Case = gameObject;
+
         anim.ResetTrigger("Fall");
         anim.ResetTrigger("Explode");
         anim.SetTrigger("Bool");
@@ -268,6 +276,9 @@ public class Sc_Case_808 : MonoBehaviour
         GM.Case = null;
     }
     #endregion
+
+    
+
 
     #region voisin_lst_gestion
     void SetVoisin()
@@ -329,25 +340,23 @@ public class Sc_Case_808 : MonoBehaviour
         GM.Score(15*rang);
 
         if (Bomb)
-        {            
-            anim.SetTrigger("Explode");            
+        {
+            StartCoroutine(Model.GetComponent<Sc_3DEffect>().Explosion());
         }
     }
-
+   
 
     public void Explosion()
     {
-        vérifiés.Clear();
+        
         GM.Combo();
-
 
         foreach (GameObject Go in lst_DoubleCo)
         {
             if (!vérifiés.Contains(Go) & Go.CompareTag("Case"))
             {
                 Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();                
-                Go_Sc.vérifiés.Add(gameObject);
-                
+                Go_Sc.vérifiés.Add(gameObject);                
                 if (Bomb && Go_Sc.color == color)
                 {
                     Go_Sc.Bomb = true;
@@ -360,9 +369,15 @@ public class Sc_Case_808 : MonoBehaviour
                 }
             }
         }
+        vérifiés.Clear();
         Destrouir();
     }
  
+    public void réequilibre()
+    {
+        Sc_pds.vd_ApplyPoids(-1);
+    }
+    
 
     public bool Ancrée(bool original, GameObject parent)
     {
@@ -428,22 +443,28 @@ public class Sc_Case_808 : MonoBehaviour
         return ancrée;
     }
 
-    void Destrouir()
+
+    public void destroyConnexion()
     {
-        Sc_pds.vd_ApplyPoids(-1);
+        foreach (GameObject Go in lst_Connexion)
+        {
+            Go.GetComponent<Sc_connexion>().function(false,1);
+            Go.SetActive(false);
+            
+        }
+    }
+
+
+    public void Destrouir()
+    {       
 
         #region disparition modèle
         OQP = false; Bomb = false;  color = 0;
-       
-        Destroy(Model);
 
-        foreach (GameObject Go in lst_Connexion)
-        {
-            Go.SetActive(false);
-        }
+
+        destroyConnexion();
 
         resetfunction();
-
 
         #endregion
 
@@ -460,7 +481,6 @@ public class Sc_Case_808 : MonoBehaviour
         lst_DoubleCo.Clear();
 
         anim.SetTrigger("Reset");
-
     }
 
 

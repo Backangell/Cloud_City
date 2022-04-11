@@ -12,6 +12,9 @@ public class Sc_Camera_808 : MonoBehaviour
     public GameObject cible;
     public Sc_GameManager_808 GM;
 
+    bool play;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +26,11 @@ public class Sc_Camera_808 : MonoBehaviour
         point = cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0f, 0f, cam.nearClipPlane));
         if (!GM.lost)
         {
-            Raycast();
+            if (GM.play) 
+            {
+                Raycast();
+            }
+            
         }
     }
 

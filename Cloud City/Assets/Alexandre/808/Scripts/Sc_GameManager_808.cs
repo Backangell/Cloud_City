@@ -65,6 +65,12 @@ public class Sc_GameManager_808 : MonoBehaviour
             Case.GetComponent<Sc_Case_808>().OnClick();
         }
 
+        if (Input.GetMouseButtonDown(2))
+        {
+            ReplaceNext();
+        }
+
+
         if (Input.GetMouseButtonDown(1))
         {
             #region HoldPiece
@@ -111,6 +117,11 @@ public class Sc_GameManager_808 : MonoBehaviour
         play = true;
     }*/
 
+
+    void ReplaceNext ()
+    {
+        NextBat();
+    }
 
     public void NextBat()// créer la liste des connexion du prochain batiment à poser
     {

@@ -214,8 +214,15 @@ public class Sc_Case_808 : MonoBehaviour
         Sc_Case_808 Sc_Voisin;
         GM.lst_Modules.Add(gameObject);
         OQP = true; IsOverlap = false;
-        
-        Sc_pds.vd_ApplyPoids(1);
+
+        if (!GM.Bombe)
+        {
+            Sc_pds.vd_ApplyPoids(1);
+        }
+        else
+        {
+            Model.GetComponent<Sc_3DEffect>().Bombe = true;
+        }
 
         foreach (int x in GM.Connexion)
         {
@@ -232,7 +239,6 @@ public class Sc_Case_808 : MonoBehaviour
                         {
                             GM.lst_undead.Add(lst_Voisin[x]);
                         }
-
                     }
 
                     if (!lst_seConnect.Contains(gameObject))
@@ -276,9 +282,6 @@ public class Sc_Case_808 : MonoBehaviour
         GM.Case = null;
     }
     #endregion
-
-    
-
 
     #region voisin_lst_gestion
     void SetVoisin()
@@ -463,6 +466,9 @@ public class Sc_Case_808 : MonoBehaviour
 
 
         destroyConnexion();
+       
+        Model.GetComponent<Sc_3DEffect>().detruireGo();
+
 
         resetfunction();
 

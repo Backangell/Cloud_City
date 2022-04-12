@@ -7,7 +7,7 @@ public class ile_Poids : MonoBehaviour
     [Space]
     [Header("Poids sur Axe")]
     [Space]
-    public float f_monpoids = 10;
+    public float f_monpoids;
 
     [Space]
 
@@ -37,12 +37,10 @@ public class ile_Poids : MonoBehaviour
     void Start()
     {
         Sc_case = gameObject.GetComponent<Sc_Case_808>();
-
         //Prendre les positions dans le monde 
         f_posX = transform.position.x;
         f_posZ = transform.position.z;
 
-        //f_monpoids = 10f;
     }
 
     void Update()
@@ -51,9 +49,6 @@ public class ile_Poids : MonoBehaviour
 
     public void vd_Ratio(float x,float z,float poids)
     {
-
-
-
         //Faire un ratio de 100% (Position AxeX + Position AxeZ)
 
         float f_PoidsTotal = Mathf.Abs(x) + Mathf.Abs(z);
@@ -131,8 +126,8 @@ public class ile_Poids : MonoBehaviour
         }
         else 
         { 
-        f_OnX *= Mathf.Sign(x);
-        f_OnZ *= Mathf.Sign(z);
+            f_OnX *= Mathf.Sign(x);
+            f_OnZ *= Mathf.Sign(z);
         }
         //print("signe de x   :" + x);
         //print("signe de z   :" + z);

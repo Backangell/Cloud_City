@@ -23,7 +23,7 @@ public class Sc_connexion : MonoBehaviour
     {
         if (x)
         {
-            Debug.Log(couleur);
+            //Debug.Log(couleur);
             VFX = Instantiate(lst_ComboVfx[couleur-1], gameObject.transform);
         }
         else

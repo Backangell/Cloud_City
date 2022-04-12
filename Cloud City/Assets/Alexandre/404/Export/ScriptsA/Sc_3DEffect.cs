@@ -6,6 +6,7 @@ public class Sc_3DEffect : MonoBehaviour
 {
     public Animator anim;
     public GameObject FX, Case;
+    public bool Bombe;
 
     // Start is called before the first frame update
     void Start()
@@ -32,12 +33,16 @@ public class Sc_3DEffect : MonoBehaviour
 
     public void detruireGo()
     {
-        Destroy(gameObject);
+        Destroy(gameObject);        
     }
 
     public void detruireConn()
     {
-        Case.GetComponent<Sc_Case_808>().réequilibre();
+        if (!Bombe)
+        {
+            Case.GetComponent<Sc_Case_808>().réequilibre();
+        }
+       
         Case.GetComponent<Sc_Case_808>().destroyConnexion();
     }
     

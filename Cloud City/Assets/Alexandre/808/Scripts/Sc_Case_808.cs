@@ -361,8 +361,8 @@ public class Sc_Case_808 : MonoBehaviour
         GM.Combo();
 
         foreach (GameObject Go in lst_DoubleCo)
-        {
-            if (!vérifiés.Contains(Go) & Go.CompareTag("Case"))
+        {            
+            if (!vérifiés.Contains(Go) & Go.tag == "Case")
             {
                 Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();  
                 

@@ -136,7 +136,7 @@ public class Sc_GameManager_808 : MonoBehaviour
     public void NextBat()// créer la liste des connexion du prochain batiment à poser
     {
         #region definir la prochaine couleur
-        ProchaineCouleur = Random.Range(1, 5);//couleur aléatoire
+        ProchaineCouleur = Random.Range(1,5);//couleur aléatoire
         #endregion
 
         #region est une bombe? 
@@ -146,7 +146,7 @@ public class Sc_GameManager_808 : MonoBehaviour
 
         float B = Random.Range(0f, 1f); //bombe aléatoire
 
-        BombChance = (lst_Modules_Color[ProchaineCouleur] / 3) * 0.1f;
+        BombChance = (lst_Modules_Color[ProchaineCouleur] / 3) * 0.2f;
 
 
         if (B < BombChance)    //20%

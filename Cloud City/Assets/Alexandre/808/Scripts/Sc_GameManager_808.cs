@@ -43,12 +43,14 @@ public class Sc_GameManager_808 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         play = false;
         lost = false;
         score = 0;
         HoldEmpty = true;
         NextBat();
         BatActualToNext();
+        StartCoroutine(Begin());
     }
 
     // Update is called once per frame
@@ -112,10 +114,12 @@ public class Sc_GameManager_808 : MonoBehaviour
             combo_Mult = 1;
         }
     }
-    /*public void begin()
+
+    IEnumerator Begin()
     {
+        yield return new WaitForSeconds(3);
         play = true;
-    }*/
+    }
 
 
     void ReplaceNext ()
@@ -144,8 +148,15 @@ public class Sc_GameManager_808 : MonoBehaviour
         #endregion
 
         #region definir les prochaines connexions
-        
-        linkNb = (Random.Range(2, 7)); //Nombre de connexions
+
+        if (prochainEstBombe)
+        {
+            linkNb = 1; //Nombre de connexions
+        }
+        if (!prochainEstBombe)
+        {
+            linkNb = (Random.Range(2, 7)); //Nombre de connexions
+        }
 
         List<int> Xlist = new List<int>(); //génére la list des connexions
 
@@ -235,8 +246,8 @@ public class Sc_GameManager_808 : MonoBehaviour
     {
         play = false;
         yield return new WaitForSeconds(1);
-        //Endscreen();
-        SwitchScene(1);
+        Endscreen();
+        //SwitchScene(1);
     }
 
     public void SwitchScene(int x)
@@ -253,7 +264,8 @@ public class Sc_GameManager_808 : MonoBehaviour
     }
     void Endscreen()
     {
-        EndScreen.SetActive(true);
+        //Debug.Log("end");
+        SceneManager.LoadScene("Game Over");
     }
 
     public void Combo()

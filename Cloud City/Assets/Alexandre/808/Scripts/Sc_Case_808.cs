@@ -11,6 +11,7 @@ public class Sc_Case_808 : MonoBehaviour
     public bool OQP;        //il y a un module
     public bool Posable;    //les connexions sont bien relié
     public bool Bomb;
+    
 
     ile_Poids Sc_pds;
 
@@ -212,6 +213,7 @@ public class Sc_Case_808 : MonoBehaviour
     public void OnClick()
     {
         Sc_Case_808 Sc_Voisin;
+
         GM.lst_Modules.Add(gameObject);
         OQP = true; IsOverlap = false;
 
@@ -219,6 +221,7 @@ public class Sc_Case_808 : MonoBehaviour
         {
             Sc_pds.vd_ApplyPoids(1);
         }
+
         else
         {
             Model.GetComponent<Sc_3DEffect>().Bombe = true;
@@ -228,11 +231,13 @@ public class Sc_Case_808 : MonoBehaviour
         {
             if (lst_Voisin[x] != null)
             {
+
                 if (lst_Voisin[x].CompareTag ( "Case" ))
                 {
+
                     Sc_Voisin = lst_Voisin[x].GetComponent<Sc_Case_808>();
 
-                    if (lst_Voisin[x].GetComponent<Sc_Case_808>().Dead)
+                    if (Sc_Voisin.Dead)
                     {
                         Sc_Voisin.SetAlive(false);
                         if (!GM.lst_undead.Contains(lst_Voisin[x]))
@@ -344,27 +349,30 @@ public class Sc_Case_808 : MonoBehaviour
 
         if (Bomb)
         {
-            StartCoroutine(Model.GetComponent<Sc_3DEffect>().Explosion());
+            StartCoroutine( Model.GetComponent<Sc_3DEffect>().Explosion());
         }
     }
    
 
     public void Explosion()
     {
-        
         GM.Combo();
 
         foreach (GameObject Go in lst_DoubleCo)
         {
             if (!vérifiés.Contains(Go) & Go.CompareTag("Case"))
             {
-                Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();                
-                Go_Sc.vérifiés.Add(gameObject);                
+                Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();  
+                
+                Go_Sc.vérifiés.Add(gameObject); //éviter les boucles infinies
+                
                 if (Bomb && Go_Sc.color == color)
                 {
+                    GM.lst_comboDone.Clear();
                     Go_Sc.Bomb = true;
                     Go_Sc.Detonation();
                 }
+
                 else if (Bomb && Go_Sc.color != color)
                 {
                     GM.lst_comboDone.Clear();                    
@@ -384,6 +392,8 @@ public class Sc_Case_808 : MonoBehaviour
 
     public bool Ancrée(bool original, GameObject parent)
     {
+        
+
         GM.lst_comboDone.Add(gameObject);
 
         bool ancrée = false;
@@ -418,6 +428,7 @@ public class Sc_Case_808 : MonoBehaviour
                                 
                             }
                         }
+                        GM.lst_comboDone.Clear();
                         return ancrée;
                     }
                 }
@@ -433,16 +444,20 @@ public class Sc_Case_808 : MonoBehaviour
                             parent.GetComponent<Sc_Case_808>().lst_enfant.Add(go);
                         }
                     }
+                    GM.lst_comboDone.Clear();
                     return ancrée;
                 }
             }
+
         }
         #endregion
 
         if (!ancrée)
         {
-            anim.SetTrigger("Fall");                       
+            anim.SetTrigger("Fall");            
         }
+
+        GM.lst_comboDone.Clear();
         return ancrée;
     }
 
@@ -452,8 +467,7 @@ public class Sc_Case_808 : MonoBehaviour
         foreach (GameObject Go in lst_Connexion)
         {
             Go.GetComponent<Sc_connexion>().function(false,1);
-            Go.SetActive(false);
-            
+            Go.SetActive(false);            
         }
     }
 
@@ -466,9 +480,11 @@ public class Sc_Case_808 : MonoBehaviour
 
 
         destroyConnexion();
-       
-        Model.GetComponent<Sc_3DEffect>().detruireGo();
 
+        if (Model != null)
+        {
+            Model.GetComponent<Sc_3DEffect>().detruireGo();
+        }
 
         resetfunction();
 
@@ -486,7 +502,7 @@ public class Sc_Case_808 : MonoBehaviour
         lst_connecté.Clear();
         lst_DoubleCo.Clear();
 
-        anim.SetTrigger("Reset");
+        anim.SetTrigger("Reset");        
     }
 
 

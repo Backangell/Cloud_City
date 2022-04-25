@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 120408964282709289}
   - component: {fileID: 120408964282709290}
   - component: {fileID: 120408964282709288}
+  - component: {fileID: 7706164512639507755}
   m_Layer: 0
   m_Name: Main Camera 1
   m_TagString: MainCamera
@@ -119,6 +120,7 @@ MonoBehaviour:
   linkNb: 0
   BombChance: 0.2
   Case: {fileID: 0}
+  EndScreen: {fileID: 0}
   Overlay: {fileID: 0}
   light: {fileID: 0}
   lst_Modules: []
@@ -139,6 +141,7 @@ MonoBehaviour:
   lst_comboDone: []
   combo: 0
   lost: 0
+  play: 0
   combo_Timer: 0
   combo_Mult: 0
   score: 0
@@ -186,6 +189,19 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &7706164512639507755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120408964282709294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d21f3f9db45a384c88e736ec59d1f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
 --- !u!1 &120408965423301398
 GameObject:
   m_ObjectHideFlags: 0

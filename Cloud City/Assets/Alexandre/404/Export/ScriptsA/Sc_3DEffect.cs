@@ -26,7 +26,9 @@ public class Sc_3DEffect : MonoBehaviour
 
     public IEnumerator Explosion()
     {
+
         GetComponent<Animator>().SetTrigger("EXPLOSE");
+        
         yield return new WaitForSeconds(0.5f);
         Case.GetComponent<Sc_Case_808>().Explosion();
     }

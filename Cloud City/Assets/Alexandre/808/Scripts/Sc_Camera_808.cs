@@ -28,15 +28,18 @@ public class Sc_Camera_808 : MonoBehaviour
         {
             if (GM.play) 
             {
-                Raycast();
+                Raycast(true);
             }
-            
+            else
+            {
+                Raycast(false);
+            }
         }
     }
 
-    public void Raycast()
+    public void Raycast(bool play)
     {               
-        if (Physics.Raycast(transform.position, point - transform.position, out hit) )
+        if (Physics.Raycast(transform.position, point - transform.position, out hit) & play )
         {
             cible = hit.collider.gameObject;
 

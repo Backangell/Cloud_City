@@ -217,6 +217,8 @@ public class Sc_Case_808 : MonoBehaviour
         GM.lst_Modules.Add(gameObject);
         OQP = true; IsOverlap = false;
 
+        GM.listintgModuleColors(true, color);
+
         if (!GM.Bombe)
         {
             Sc_pds.vd_ApplyPoids(1);
@@ -386,6 +388,7 @@ public class Sc_Case_808 : MonoBehaviour
  
     public void réequilibre()
     {
+        
         Sc_pds.vd_ApplyPoids(-1);
     }
     
@@ -473,7 +476,8 @@ public class Sc_Case_808 : MonoBehaviour
 
 
     public void Destrouir()
-    {       
+    {
+        GM.listintgModuleColors(false, color);
 
         #region disparition modèle
         OQP = false; Bomb = false;  color = 0;

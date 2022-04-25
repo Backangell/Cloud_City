@@ -10,13 +10,13 @@ public class LoadLoader : MonoBehaviour
     public Slider slider;
     public TextMeshProUGUI progressText;
 
-    public void Button_Start (int sceneIndex)
+    public void Button_Start(int sceneIndex)
     {
         StartCoroutine(LoadAsynchronously(sceneIndex));
-        
+
     }
 
-    IEnumerator LoadAsynchronously (int sceneIndex)
+    IEnumerator LoadAsynchronously(int sceneIndex)
     {
         yield return null;
 
@@ -26,12 +26,13 @@ public class LoadLoader : MonoBehaviour
 
         while (!operation.isDone)
         {
-            float progress = Mathf.Clamp01(operation.progress / 0.12f);
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
 
             if (progress > 1) progress = 1;
 
             slider.value = progress;
-            progressText.text = progress * 100f + "%";
+            progress = Mathf.Round(progress * 100f);
+            progressText.text = progress + "%";
 
             yield return null;
         }

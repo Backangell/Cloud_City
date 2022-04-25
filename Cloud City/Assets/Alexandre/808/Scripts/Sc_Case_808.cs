@@ -217,6 +217,8 @@ public class Sc_Case_808 : MonoBehaviour
         GM.lst_Modules.Add(gameObject);
         OQP = true; IsOverlap = false;
 
+        GM.listintgModuleColors(true, color);
+
         if (!GM.Bombe)
         {
             Sc_pds.vd_ApplyPoids(1);
@@ -359,8 +361,8 @@ public class Sc_Case_808 : MonoBehaviour
         GM.Combo();
 
         foreach (GameObject Go in lst_DoubleCo)
-        {
-            if (!vérifiés.Contains(Go) & Go.CompareTag("Case"))
+        {            
+            if (!vérifiés.Contains(Go) & Go.tag == "Case")
             {
                 Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();  
                 
@@ -386,6 +388,7 @@ public class Sc_Case_808 : MonoBehaviour
  
     public void réequilibre()
     {
+        
         Sc_pds.vd_ApplyPoids(-1);
     }
     
@@ -473,7 +476,8 @@ public class Sc_Case_808 : MonoBehaviour
 
 
     public void Destrouir()
-    {       
+    {
+        GM.listintgModuleColors(false, color);
 
         #region disparition modèle
         OQP = false; Bomb = false;  color = 0;

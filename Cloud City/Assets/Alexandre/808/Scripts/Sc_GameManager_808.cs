@@ -9,7 +9,7 @@ public class Sc_GameManager_808 : MonoBehaviour
     public float BombChance;
 
     public GameObject Case, EndScreen;
-    
+
     public Sc_Overlay Overlay;
     public Light light;
 
@@ -19,8 +19,11 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public List<GameObject> lst_comboDone;
 
-    public bool combo , lost, play;
-    public int  combo_Timer, combo_Mult, score;
+    public bool combo, lost, play;
+    public int combo_Timer, combo_Mult, score;
+
+    [Header("Module")]
+    public  List<int> lst_Modules_Color;
 
     [Header("ActualBat")]
 
@@ -51,6 +54,7 @@ public class Sc_GameManager_808 : MonoBehaviour
         NextBat();
         BatActualToNext();
         StartCoroutine(Begin());
+        
     }
 
     // Update is called once per frame
@@ -127,17 +131,25 @@ public class Sc_GameManager_808 : MonoBehaviour
         NextBat();
     }
 
+    
+
     public void NextBat()// créer la liste des connexion du prochain batiment à poser
     {
         #region definir la prochaine couleur
-        ProchaineCouleur = Random.Range(1, 5);//couleur aléatoire
+        ProchaineCouleur = Random.Range(1,5);//couleur aléatoire
         #endregion
 
         #region est une bombe? 
 
-        float B = Random.Range(0f, 1f); //bombe aléatoire
         
-        if (B < BombChance) //20%
+
+
+        float B = Random.Range(0f, 1f); //bombe aléatoire
+
+        BombChance = (lst_Modules_Color[ProchaineCouleur] / 3) * 0.2f;
+
+
+        if (B < BombChance)    //20%
         {
             prochainEstBombe = true;
         }
@@ -280,8 +292,21 @@ public class Sc_GameManager_808 : MonoBehaviour
         if (combo_Mult > 1)
         {
             combo_Timer = 600; //reset le timer
-        }
-        
+        }        
+    }
 
+
+    public void listintgModuleColors(bool Add , int color)
+    {
+        if (Add)
+        {
+            lst_Modules_Color[color] ++;
+            lst_Modules_Color[0] ++ ;
+        }
+        else
+        {
+            lst_Modules_Color[color] --;
+            lst_Modules_Color[0] -- ;
+        }
     }
 }

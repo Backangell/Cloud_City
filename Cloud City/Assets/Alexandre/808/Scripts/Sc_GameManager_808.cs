@@ -9,7 +9,7 @@ public class Sc_GameManager_808 : MonoBehaviour
     public float BombChance;
 
     public GameObject Case, EndScreen;
-
+    public Sc_Mult Mult_Txt;
     public Sc_Overlay Overlay;
     public Light light;
 
@@ -46,8 +46,8 @@ public class Sc_GameManager_808 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        play = false;
+
+        SetPlay(false);
         lost = false;
         score = 0;
         HoldEmpty = true;
@@ -116,13 +116,14 @@ public class Sc_GameManager_808 : MonoBehaviour
         else
         {
             combo_Mult = 1;
+            Mult_Txt.Mult_Txt(combo_Mult);
         }
     }
 
     IEnumerator Begin()
     {
         yield return new WaitForSeconds(3);
-        play = true;
+        SetPlay(true);
     }
 
 
@@ -254,9 +255,13 @@ public class Sc_GameManager_808 : MonoBehaviour
         Overlay.Hold(ConnexionHold, couleurHold, BombeHold);
     }    
 
+    public void SetPlay(bool B)
+    {
+        play = B;
+    }
     public IEnumerator EndRoutine()
     {
-        play = false;
+        SetPlay(false);
         yield return new WaitForSeconds(1);
         Endscreen();
         //SwitchScene(1);
@@ -282,8 +287,9 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public void Combo()
     {
-        combo_Mult++;         
-        combo_Timer = 600; //reset le timer
+        combo_Mult++;
+        Mult_Txt.Mult_Txt(combo_Mult);
+        combo_Timer = 180; //reset le timer
     }
 
     public void Score(int x)
@@ -291,8 +297,9 @@ public class Sc_GameManager_808 : MonoBehaviour
         score = score + (x * combo_Mult);      
         if (combo_Mult > 1)
         {
-            combo_Timer = 600; //reset le timer
-        }        
+            combo_Timer = 180; //reset le timer
+        }     
+        
     }
 
 

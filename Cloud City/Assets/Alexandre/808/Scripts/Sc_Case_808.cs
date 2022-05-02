@@ -17,7 +17,7 @@ public class Sc_Case_808 : MonoBehaviour
 
     public int color, rang;
 
-    public GameObject verif, interior, module, Model;
+    public GameObject verif, interior, module, Model, Point;
     public Sc_GameManager_808 GM;
 
     public List<GameObject> lst_enfant;
@@ -219,9 +219,13 @@ public class Sc_Case_808 : MonoBehaviour
 
         GM.listintgModuleColors(true, color);
 
+
+
         if (!GM.Bombe)
         {
             Sc_pds.vd_ApplyPoids(1);
+                        
+            Point.GetComponent<Sc_Case_Point>().AddPoint(15 * rang * GM.combo_Mult, color);
         }
 
         else
@@ -347,8 +351,6 @@ public class Sc_Case_808 : MonoBehaviour
 
     public void Detonation()
     {
-        GM.Score(15*rang);
-
         if (Bomb)
         {
             StartCoroutine( Model.GetComponent<Sc_3DEffect>().Explosion());
@@ -359,6 +361,7 @@ public class Sc_Case_808 : MonoBehaviour
     public void Explosion()
     {
         GM.Combo();
+        Point.GetComponent<Sc_Case_Point>().AddPoint(100 * GM.combo_Mult, color);
 
         foreach (GameObject Go in lst_DoubleCo)
         {            

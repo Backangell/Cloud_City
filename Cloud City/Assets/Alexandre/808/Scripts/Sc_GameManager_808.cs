@@ -8,6 +8,9 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public float BombChance;
 
+    public AudioSource AudioEffect;
+    public List<AudioClip> Lst_AudioS;
+
     public GameObject Case, EndScreen;
     public Sc_Mult Mult_Txt;
     public Sc_Overlay Overlay;
@@ -315,5 +318,13 @@ public class Sc_GameManager_808 : MonoBehaviour
             lst_Modules_Color[color] --;
             lst_Modules_Color[0] -- ;
         }
+    }
+
+
+
+    public void PlaySoundFunction (int x)
+    {
+        AudioEffect.clip = Lst_AudioS[x];
+        AudioEffect.Play();
     }
 }

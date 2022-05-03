@@ -15,6 +15,8 @@ public class Sc_Case_808 : MonoBehaviour
 
     ile_Poids Sc_pds;
 
+    
+
     public int color, rang;
 
     public GameObject verif, interior, module, Model, Point;
@@ -54,7 +56,7 @@ public class Sc_Case_808 : MonoBehaviour
         SetVoisin();        
     }
 
-    // Update is called once per frame
+    // Update is called once per
     void Update()
     {
         
@@ -127,9 +129,15 @@ public class Sc_Case_808 : MonoBehaviour
             {
                 RotationPièce(1);   //on refait tourner la pièce
             }
+
+
         }
 
+        #region sound
 
+        GM.PlaySoundFunction(0);
+
+        #endregion
     }
 
     public void OutOverlapping()
@@ -194,6 +202,12 @@ public class Sc_Case_808 : MonoBehaviour
         {
             RotationPièce(x);   //on refait tourner la pièce
         }
+
+        #region sound
+
+        GM.PlaySoundFunction(3);
+
+        #endregion
 
     }
     void Rot_Verif()

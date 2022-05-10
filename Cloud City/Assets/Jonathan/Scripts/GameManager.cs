@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
-
+    public float f_duration;
     public GameObject Starter;
 
     [Header("List")]
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         Vector3 v3_start = new Vector3(f_startX, 0, f_startZ);
         Vector3 v3_target = new Vector3(f_finalonX, 0, f_finalonZ);
 
-       StartCoroutine(nm_smoothrot(Quaternion.Euler(v3_start), Quaternion.Euler(v3_target), 0.2f));
+       StartCoroutine(nm_smoothrot(Quaternion.Euler(v3_start), Quaternion.Euler(v3_target), f_duration));
 
 
     }

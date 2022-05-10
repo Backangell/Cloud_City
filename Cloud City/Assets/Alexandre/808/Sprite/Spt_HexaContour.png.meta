@@ -32,12 +32,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -51,10 +51,12 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -112,7 +114,27 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
+    outline:
+    - - {x: -307.5, y: 532}
+      - {x: -600.5, y: 51}
+      - {x: -600.5, y: -61}
+      - {x: -313.5, y: -532}
+      - {x: 317.5, y: -532}
+      - {x: 600.5, y: -48}
+      - {x: 600.5, y: 47}
+      - {x: 317.84277, y: 532}
+    - - {x: 297.5, y: -471}
+      - {x: 253.5, y: -498}
+      - {x: -270.5, y: -494}
+      - {x: -299.5, y: -477}
+      - {x: -557.1045, y: -38.125687}
+      - {x: -563.5, y: 20}
+      - {x: -301.42285, y: 479.21057}
+      - {x: -259.5, y: 504}
+      - {x: 264.5, y: 502}
+      - {x: 301.5, y: 478}
+      - {x: 561.5, y: 21}
+      - {x: 561.7959, y: -28.740904}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000

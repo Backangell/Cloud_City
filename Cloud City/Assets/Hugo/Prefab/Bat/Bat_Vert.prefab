@@ -14712,6 +14712,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 6469355328876343648}
   FX: {fileID: 0}
+  Case: {fileID: 0}
+  Bombe: 0
 --- !u!1 &1523525234387391180
 GameObject:
   m_ObjectHideFlags: 0

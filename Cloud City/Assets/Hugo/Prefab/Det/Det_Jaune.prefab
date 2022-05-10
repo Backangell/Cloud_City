@@ -151,6 +151,7 @@ MonoBehaviour:
   anim: {fileID: 1473957642798594501}
   FX: {fileID: 0}
   Case: {fileID: 0}
+  Bombe: 0
 --- !u!1 &1473957643404047664
 GameObject:
   m_ObjectHideFlags: 0
@@ -14877,7 +14878,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -15520,7 +15521,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8
+      scalar: 10
       minScalar: 2
       maxCurve:
         serializedVersion: 2
@@ -15630,28 +15631,28 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 1
-      scalar: 4
+      scalar: 5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
-          inSlope: 3.4910033
-          outSlope: 3.4910033
+          value: 0.015380859
+          inSlope: -0.09918565
+          outSlope: -0.09918565
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
-          outWeight: 0.1331609
+          outWeight: 0.3101807
         - serializedVersion: 3
           time: 1
           value: 0
-          inSlope: -5.392636
-          outSlope: -5.392636
+          inSlope: -6.186475
+          outSlope: -6.186475
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.113768816
+          inWeight: 0.10941982
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -15958,8 +15959,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0.105882354}
-        key1: {r: 1, g: 1, b: 1, a: 0}
+        key0: {r: 1, g: 1, b: 1, a: 0.08627451}
+        key1: {r: 1, g: 1, b: 1, a: 0.03252595}
         key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -15975,7 +15976,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
+        atime1: 32575
         atime2: 65535
         atime3: 65535
         atime4: 65535
@@ -15984,7 +15985,7 @@ ParticleSystem:
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 2
+        m_NumAlphaKeys: 3
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -24984,7 +24985,7 @@ ParticleSystem:
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -25067,7 +25068,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 3.42
+      value: 3.72
       mode: 0
       spread: 0
       speed:
@@ -34719,7 +34720,7 @@ ParticleSystem:
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -34802,7 +34803,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 3.34
+      value: 3.37
       mode: 0
       spread: 0
       speed:

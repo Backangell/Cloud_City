@@ -76,7 +76,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Combo_Timer: 0
+    - Combo_Timer: 6.01
     - Vector1_7ae525f2528f4172a1d92be2e0a815e1: 180
     - Vector1_9fba66d818f54cc99944ecaf0d881894: -0.15
     - _AlphaClip: 0

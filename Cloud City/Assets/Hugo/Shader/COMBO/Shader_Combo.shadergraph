@@ -4886,7 +4886,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "bd856eaa92844253845fdf3f5f557c63",
     "m_Id": 0,
-    "m_DisplayName": "_RemovedSegment",
+    "m_DisplayName": "Combo_Timer",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

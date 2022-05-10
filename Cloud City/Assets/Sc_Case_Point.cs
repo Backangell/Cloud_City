@@ -18,7 +18,25 @@ public class Sc_Case_Point : MonoBehaviour
 
     public void AddPoint(int X, int Col)
     {
-        Point.text = "+" + X.ToString();
+        if (X == 15)
+        {
+            Point.fontSize = 25 + GM.combo_Mult;
+        }
+        else if (X == 30) 
+        {
+            Point.fontSize = 30 + GM.combo_Mult;
+        }
+        else if (X == 45)
+        {
+            Point.fontSize = 35 + GM.combo_Mult;
+        }
+        else
+        {
+            Point.fontSize = 40 + GM.combo_Mult * 2;
+        }
+
+
+        Point.text = "+" + (X*GM.combo_Mult).ToString();
         GM.Score(X);
         gameObject.transform.rotation = Quaternion.Euler(90, 0, 0);
 

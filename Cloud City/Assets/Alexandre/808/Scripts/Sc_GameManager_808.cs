@@ -8,8 +8,11 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public float BombChance;
 
+    public SC_Camembert Camembert;
+
     public AudioSource AudioEffect;
     public List<AudioClip> Lst_AudioS;
+
 
     public GameObject Case, EndScreen;
     public Sc_Mult Mult_Txt;
@@ -53,6 +56,7 @@ public class Sc_GameManager_808 : MonoBehaviour
         SetPlay(false);
         lost = false;
         score = 0;
+        combo_Mult = 1;
         HoldEmpty = true;
         NextBat();
         BatActualToNext();
@@ -63,6 +67,12 @@ public class Sc_GameManager_808 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        #region all frames
+        //center_Shad.SetInt(x);
+        #endregion
+
+
         if (Input.GetAxis("Mouse ScrollWheel") != 0 && Case != null) //fais toruner les cases
         {
             Case.GetComponent<Sc_Case_808>().RotationPièce(-Input.GetAxisRaw("Mouse ScrollWheel"));
@@ -78,7 +88,6 @@ public class Sc_GameManager_808 : MonoBehaviour
         {
             ReplaceNext();
         }
-
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -112,15 +121,12 @@ public class Sc_GameManager_808 : MonoBehaviour
             light.intensity= light.intensity + 2 ;
         }
 
-        if (combo_Timer > 0)
-        {
-            combo_Timer--;
-        }
-        else
-        {
-            combo_Mult = 1;
-            Mult_Txt.Mult_Txt(combo_Mult);
-        }
+    }
+
+    public void ComboRest ()
+    {
+        combo_Mult = 1;
+        Mult_Txt.Mult_Txt(combo_Mult);
     }
 
     IEnumerator Begin()
@@ -130,7 +136,7 @@ public class Sc_GameManager_808 : MonoBehaviour
     }
 
 
-    void ReplaceNext ()
+    void ReplaceNext()
     {
         NextBat();
     }
@@ -292,20 +298,15 @@ public class Sc_GameManager_808 : MonoBehaviour
     {
         combo_Mult++;
         Mult_Txt.Mult_Txt(combo_Mult);
-        combo_Timer = 180; //reset le timer
+        
+        Camembert.LaunchTimer(); //reset le timer
     }
 
     public void Score(int x)
     {
-        score = score + (x * combo_Mult);      
-        if (combo_Mult > 1)
-        {
-            combo_Timer = 180; //reset le timer
-        }     
-        
+        score += (x * combo_Mult);        
     }
-
-
+    
     public void listintgModuleColors(bool Add , int color)
     {
         if (Add)

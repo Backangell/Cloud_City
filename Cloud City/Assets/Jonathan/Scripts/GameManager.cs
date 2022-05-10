@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
 
             float f_smoothTime = Mathf.SmoothStep(0, 1, f_elapsedTime / timeDuration);
 
-            Quaternion v3_smoothRot = Quaternion.Lerp(start, target, f_smoothTime);
+            Quaternion v3_smoothRot = Quaternion.Lerp(start, target, f_smoothTime); 
 
             go_start.transform.rotation = v3_smoothRot;
 

@@ -758,6 +758,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4928391256284584685, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885188400654844900, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_Name
       value: Connexion_SO
@@ -895,6 +899,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2499990251277705668, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928391256284584685, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7885188400654844900, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
@@ -1036,6 +1044,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4928391256284584685, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885188400654844900, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_Name
       value: Connexion_S
@@ -1163,6 +1175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4928391256284584685, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885188400654844900, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_Name
       value: Connexion_NE
@@ -1254,6 +1270,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8114456159717822786}
     m_Modifications:
+    - target: {fileID: 4928391256284584685, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7885188400654844900, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_Name
       value: Connexion_ON

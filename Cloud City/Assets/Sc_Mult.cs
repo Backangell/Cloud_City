@@ -13,7 +13,7 @@ public class Sc_Mult : MonoBehaviour
     void Start()
     {
         Txt = GetComponent<TextMeshPro>();
-        Txt.text = GM.combo_Mult.ToString();
+        Txt.text = "x" + GM.combo_Mult.ToString();
         GM = Camera.main.GetComponent<Sc_GameManager_808>();
     }
 
@@ -25,6 +25,6 @@ public class Sc_Mult : MonoBehaviour
 
     public void Mult_Txt(int x)
     {
-        Txt.text = x.ToString();
+        Txt.text ="x" +  x.ToString();
     }
 }

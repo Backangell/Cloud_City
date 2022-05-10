@@ -4148,17 +4148,17 @@
     },
     "m_Name": "Combo_Timer",
     "m_DefaultReferenceName": "Vector1_9fba66d818f54cc99944ecaf0d881894",
-    "m_OverrideReferenceName": "Combo_Timer",
+    "m_OverrideReferenceName": "Combo_Timer_Visu",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
+    "hlslDeclarationOverride": 1,
     "m_Hidden": false,
     "m_Value": 0.0,
-    "m_FloatType": 0,
+    "m_FloatType": 1,
     "m_RangeValues": {
         "x": 0.0,
-        "y": 1.0
+        "y": 6.0
     }
 }
 
@@ -4886,7 +4886,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "bd856eaa92844253845fdf3f5f557c63",
     "m_Id": 0,
-    "m_DisplayName": "_RemovedSegment",
+    "m_DisplayName": "Combo_Timer",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

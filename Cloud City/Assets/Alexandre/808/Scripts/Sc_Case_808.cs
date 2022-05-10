@@ -237,9 +237,8 @@ public class Sc_Case_808 : MonoBehaviour
 
         if (!GM.Bombe)
         {
-            Sc_pds.vd_ApplyPoids(1);
-                        
-            Point.GetComponent<Sc_Case_Point>().AddPoint(15 * rang * GM.combo_Mult, color);
+            Sc_pds.vd_ApplyPoids(1);                        
+            Point.GetComponent<Sc_Case_Point>().AddPoint(15 * rang, color);
         }
 
         else
@@ -375,7 +374,7 @@ public class Sc_Case_808 : MonoBehaviour
     public void Explosion()
     {
         GM.Combo();
-        Point.GetComponent<Sc_Case_Point>().AddPoint(100 * GM.combo_Mult, color);
+        Point.GetComponent<Sc_Case_Point>().AddPoint(100, color);
 
         foreach (GameObject Go in lst_DoubleCo)
         {            

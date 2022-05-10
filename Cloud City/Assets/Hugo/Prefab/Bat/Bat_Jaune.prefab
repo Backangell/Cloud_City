@@ -29178,8 +29178,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   FX: {fileID: 0}
-  Case: {fileID: 0}
-  Bombe: 0
 --- !u!95 &3932589752491805359
 Animator:
   serializedVersion: 3

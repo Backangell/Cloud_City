@@ -13981,7 +13981,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 689}
-  m_SizeDelta: {x: 760.97925, y: 18.38092}
+  m_SizeDelta: {x: 906.0911, y: 18.3809}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539522565
 MonoBehaviour:
@@ -14003,7 +14003,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SCOREBOARD
+  m_text: LEADERBOARD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18d978e1c69531545b94ad25c29ec8d4, type: 2}
   m_sharedMaterial: {fileID: 5771580145582077253, guid: 18d978e1c69531545b94ad25c29ec8d4, type: 2}

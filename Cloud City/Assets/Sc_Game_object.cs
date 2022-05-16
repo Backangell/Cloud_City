@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sc_Game_object : MonoBehaviour
 {
-    public Sc_GameManager_808 GM;
+    public Sc_AudioScript SD;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +17,13 @@ public class Sc_Game_object : MonoBehaviour
         
     }
 
-    public void SoundFX(int x)
+    public void Music()
     {
-        GM.PlaySoundFunction(x);
+        SD.Playmusic();
+    }
+
+    public void FX(int x)
+    {
+        SD.PlaySoundFunction(x);
     }
 }

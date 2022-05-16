@@ -8,6 +8,8 @@ public class Sc_Camera_808 : MonoBehaviour
     public Camera cam;
     Vector3 point;
 
+    public Sc_AudioScript Audio;
+
     RaycastHit hit;
     public GameObject cible;
     public Sc_GameManager_808 GM;

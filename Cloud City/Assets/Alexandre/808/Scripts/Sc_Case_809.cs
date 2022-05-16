@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sc_Case_808 : MonoBehaviour
+public class Sc_Case_809: MonoBehaviour
 {
     [Header("case statut")]
 
@@ -260,7 +260,7 @@ public class Sc_Case_808 : MonoBehaviour
 
                     if (Sc_Voisin.Dead)
                     {
-                        Sc_Voisin.SetAlive(false);
+                        //Sc_Voisin.SetAlive(false);
                         if (!GM.lst_undead.Contains(lst_Voisin[x]))
                         {
                             GM.lst_undead.Add(lst_Voisin[x]);
@@ -538,6 +538,7 @@ public class Sc_Case_808 : MonoBehaviour
         #region disparition modèle
         OQP = false; Bomb = false;  color = 0;
 
+
         destroyConnexion();
 
         if (Model != null)
@@ -546,6 +547,7 @@ public class Sc_Case_808 : MonoBehaviour
         }
 
         resetfunction();
+
         #endregion
 
         foreach(GameObject Go in lst_connecté)
@@ -553,7 +555,7 @@ public class Sc_Case_808 : MonoBehaviour
             if (Go.CompareTag("Case"))
             {
                 Go.GetComponent<Sc_Case_808>().lst_seConnect.Remove(gameObject);
-                Go.GetComponent<Sc_Case_808>().resetfunction();
+                //Go.GetComponent<Sc_Case_808>().resetfunction();
             }            
         }
 
@@ -564,7 +566,7 @@ public class Sc_Case_808 : MonoBehaviour
     }
 
 
-    private void resetfunction()
+    public void resetfunction()
     {
         if (lst_seConnect.Count <= 0)
         {
@@ -579,5 +581,14 @@ public class Sc_Case_808 : MonoBehaviour
 
         Posable = false;
     }
+
+    public void sound(int x)
+    {
+        //GM.PlaySoundFunction(x);
+    }
+
+
+
+
 
 }

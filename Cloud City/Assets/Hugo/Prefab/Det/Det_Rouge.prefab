@@ -34558,7 +34558,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -38978,6 +38978,7 @@ MonoBehaviour:
   anim: {fileID: 4425420387232965184}
   FX: {fileID: 0}
   Case: {fileID: 0}
+  Bombe: 0
 --- !u!1 &4425420387842551461
 GameObject:
   m_ObjectHideFlags: 0

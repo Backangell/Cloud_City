@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ae11821303db048a0bae20de126e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  f_duration: 0
+  f_duration: 1
   Starter: {fileID: 0}
   lst_iles: []
   gm_iles: {fileID: 0}
@@ -55,5 +55,5 @@ MonoBehaviour:
   b_bomber: 0
   hit_voisins: []
   go_start: {fileID: 0}
-  b_NewRotSystem: 0
+  b_NewRotSystem: 1
   b_GetinfoRotationONCE: 0

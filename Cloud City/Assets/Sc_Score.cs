@@ -17,7 +17,7 @@ public class Sc_Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (score < GM.score)
+        if (score < Sc_GameManager_808.score)
         {
             score += GM.score-score;
         }

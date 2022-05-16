@@ -35,4 +35,6 @@ public class Sc_Mult : MonoBehaviour
             anim.Play();
         }
     }
+
+    
 }

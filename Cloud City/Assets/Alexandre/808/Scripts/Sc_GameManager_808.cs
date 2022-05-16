@@ -20,7 +20,10 @@ public class Sc_GameManager_808 : MonoBehaviour
     public List<GameObject> lst_comboDone;
 
     public bool combo, lost, play;
-    public int combo_Timer, combo_Mult, score;
+    public int combo_Timer, combo_Mult;
+
+    public static int score;
+
 
     [Header("Module")]
     public  List<int> lst_Modules_Color;

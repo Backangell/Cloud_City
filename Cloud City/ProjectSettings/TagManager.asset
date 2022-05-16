@@ -9,6 +9,9 @@ TagManager:
   - Ile
   - Case
   - Center
+  - PlayerName
+  - PlayerScore
+  - btn_confirme
   layers:
   - Default
   - TransparentFX

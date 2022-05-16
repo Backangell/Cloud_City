@@ -6,7 +6,7 @@ using TMPro;
 public class Sc_Mult : MonoBehaviour
 {
     public Sc_GameManager_808 GM;
-    
+    public Animation anim;
     TextMeshPro Txt;
 
     // Start is called before the first frame update
@@ -32,6 +32,7 @@ public class Sc_Mult : MonoBehaviour
         else
         {
             Txt.text = "x" + x.ToString();
+            anim.Play();
         }
     }
 }

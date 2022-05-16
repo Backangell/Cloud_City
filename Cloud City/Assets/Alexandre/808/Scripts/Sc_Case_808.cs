@@ -67,7 +67,7 @@ public class Sc_Case_808 : MonoBehaviour
 
     public void OnOverlap()
     {
-
+        #region prévisualisation
         if (!OQP)
         {
             if (!GM.Bombe)
@@ -135,6 +135,8 @@ public class Sc_Case_808 : MonoBehaviour
 
 
         }
+        #endregion
+
 
         #region sound
 

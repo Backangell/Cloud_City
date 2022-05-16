@@ -10,28 +10,21 @@ public class SC_Camembert : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        Mat = GetComponent<SpriteRenderer>().material;
-        Mat.SetFloat("Combo_Timer_Visu",6);
+    {        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Mat.GetFloat("Combo_Timer_Visu") <= 6)
-        {
-            Mat.SetFloat("Combo_Timer_Visu", (Mat.GetFloat("Combo_Timer_Visu") + Time.deltaTime/6));
-            
-        }
-        else if (IsTimer)
-        {
-            GM.ComboRest();
-        }
         
     }
     public void LaunchTimer()
     {
-        Mat.SetFloat("Combo_Timer_Visu", 0);
-        IsTimer = true;
+        GetComponent<Animation>().Play();        
     }
+    public void ResetCamembert()
+    {
+        GM.ComboRest();
+    }
+
 }

@@ -25,7 +25,7 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public List<GameObject> lst_comboDone;
 
-    public bool combo, lost, play;
+    public bool combo, lost, play,azertyuiop;
     public int combo_Timer, combo_Mult, score;
 
     [Header("Module")]
@@ -114,8 +114,20 @@ public class Sc_GameManager_808 : MonoBehaviour
             }
             */
             #endregion
+        }        
+        if( lost)
+        {
+            azertyuiop = !azertyuiop;
+
+            if (lst_Case.Count > 1 & azertyuiop)
+            {
+                ActiveRB(Random.Range(1, lst_Case.Count));
+            }
+            else if (lst_Case.Count == 0)
+            {
+                ActiveRB(0);
+            }   
         }
-        
     }
 
     public void ComboRest ()
@@ -310,7 +322,13 @@ public class Sc_GameManager_808 : MonoBehaviour
         }
     }
 
-
+    public void ActiveRB(int x)
+    {
+        Rigidbody Rb = lst_Case[x].GetComponent<Rigidbody>();        
+        Rb.mass = Random.Range(100, 200);
+        Rb.useGravity = true;        
+        lst_Case.Remove(lst_Case[x]);
+    }
 
 
 

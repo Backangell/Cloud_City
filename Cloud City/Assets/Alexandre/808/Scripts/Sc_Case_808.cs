@@ -427,9 +427,7 @@ public class Sc_Case_808 : MonoBehaviour
         foreach (GameObject Go in ColorChain)
         {
             Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();
-
             Go_Sc.Bomb = true;
-
             Go_Sc.Detonation();
         }
 

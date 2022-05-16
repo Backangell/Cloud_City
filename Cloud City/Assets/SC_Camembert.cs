@@ -20,8 +20,8 @@ public class SC_Camembert : MonoBehaviour
     {
         if (Mat.GetFloat("Combo_Timer_Visu") <= 6)
         {
-            Mat.SetFloat("Combo_Timer_Visu", (Mat.GetFloat("Combo_Timer_Visu") + Time.deltaTime));
-            //Debug.Log(Mat.GetFloat("Combo_Timer_Visu"));
+            Mat.SetFloat("Combo_Timer_Visu", (Mat.GetFloat("Combo_Timer_Visu") + Time.deltaTime/6));
+            
         }
         else if (IsTimer)
         {

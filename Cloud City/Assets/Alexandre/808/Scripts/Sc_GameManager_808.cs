@@ -120,7 +120,6 @@ public class Sc_GameManager_808 : MonoBehaviour
         {
             lumiere.intensity= lumiere.intensity + 2;
         }
-
     }
 
     public void ComboRest ()

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,7 +10,16 @@ public class LoadLoader : MonoBehaviour
     public GameObject loadingScreen;
     public Slider slider;
     public TextMeshProUGUI progressText;
+    public TextMeshProUGUI tipstext;
+    public CanvasGroup alphaCanvas;
+    public List<string> tips;
 
+    void Start ()
+    {
+        Tipsf();
+    }
+
+    
     public void Button_Start(int sceneIndex)
     {
         StartCoroutine(LoadAsynchronously(sceneIndex));
@@ -37,4 +47,11 @@ public class LoadLoader : MonoBehaviour
             yield return null;
         }
     }
+
+    void Tipsf()
+    {
+        Debug.Log("oui");
+        tipstext.text = tips[Random.Range(0, tips.Count)];
+    }
+
 }

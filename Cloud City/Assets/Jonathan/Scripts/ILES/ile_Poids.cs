@@ -43,9 +43,6 @@ public class ile_Poids : MonoBehaviour
 
     }
 
-    void Update()
-    {
-    }
 
     public void vd_Ratio(float x,float z,float poids)
     {
@@ -71,6 +68,7 @@ public class ile_Poids : MonoBehaviour
     
     public void vd_ApplyPoids(int x)
     {
+
         //Savoir combien de poids mettre en X & Z
         vd_Ratio(f_posX, f_posZ, f_monpoids);
 
@@ -94,7 +92,6 @@ public class ile_Poids : MonoBehaviour
         f_OnZ = f_tmp;
 
         //La distance avec le centre s'il est plus loin ou non
-        vd_CheckMultiplicateur(f_multiplucateur);
 
         GameManager.Instance.vd_MyRot(f_OnX, f_OnZ);
 
@@ -133,13 +130,6 @@ public class ile_Poids : MonoBehaviour
         //print("signe de z   :" + z);
     }
 
-    public void vd_CheckMultiplicateur(float f_multiplicateur)
-    {
-      // Faire des Raycasts sur les voisins
-      // Prendre le résultats
-      // Faire +1 ?
-    
-    }
 
 
 }

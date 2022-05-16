@@ -14,7 +14,7 @@ public class Sc_GameManager_808 : MonoBehaviour
     
 
 
-    public GameObject Case, EndScreen;
+    public GameObject Case, EndScreen, Game;
     public Sc_Mult Mult_Txt;
     public Sc_Overlay Overlay;
     public Light lumiere;
@@ -115,12 +115,7 @@ public class Sc_GameManager_808 : MonoBehaviour
             */
             #endregion
         }
-
-        if (lost)
-        {
-            lumiere.intensity= lumiere.intensity + 2;
-        }
-
+        
     }
 
     public void ComboRest ()
@@ -266,12 +261,9 @@ public class Sc_GameManager_808 : MonoBehaviour
     {
         play = B;
     }
-    public IEnumerator EndRoutine()
+    public void EndRoutine()
     {
-        SetPlay(false);
-        yield return new WaitForSeconds(1);
-        Endscreen();
-
+        Game.GetComponent<Animator>().SetTrigger("End");        
     }
 
     public void SwitchScene(int x)
@@ -286,7 +278,7 @@ public class Sc_GameManager_808 : MonoBehaviour
         }
 
     }
-    void Endscreen()
+    public void Endscreen()
     {
         SceneManager.LoadScene("Game Over");
     }

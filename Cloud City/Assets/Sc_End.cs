@@ -22,7 +22,7 @@ public class Sc_End : MonoBehaviour
         if (!GM.lost)
         {
             GM.lost = true;
-            StartCoroutine(GM.EndRoutine());
+            GM.EndRoutine();
         }
     }
 

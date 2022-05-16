@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
 
         if(b_NewRotSystem && v3_target != v3_start)
         {
-            print("newRotSystem");
+            //print("newRotSystem");
             //Application du System de rotation ! 
 
             if(crt_Coroutine != null)

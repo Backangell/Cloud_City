@@ -15,9 +15,11 @@ public class Sc_Case_808 : MonoBehaviour
 
     ile_Poids Sc_pds;
 
+    Sc_AudioScript SD;
+
     public int color, rang;
 
-    public GameObject verif, interior, module, Model;
+    public GameObject verif, interior, module, Model, Point;
     public Sc_GameManager_808 GM;
 
     public List<GameObject> lst_enfant;
@@ -46,7 +48,7 @@ public class Sc_Case_808 : MonoBehaviour
     {
         
         GM.lst_Case.Add(gameObject);
-        
+        SD = GetComponent<Sc_AudioScript>();
 
         Sc_pds = GetComponent<ile_Poids>();
         anim = GetComponent<Animator>();
@@ -54,7 +56,7 @@ public class Sc_Case_808 : MonoBehaviour
         SetVoisin();        
     }
 
-    // Update is called once per frame
+    // Update is called once per
     void Update()
     {
         
@@ -65,7 +67,7 @@ public class Sc_Case_808 : MonoBehaviour
 
     public void OnOverlap()
     {
-
+        #region prévisualisation
         if (!OQP)
         {
             if (!GM.Bombe)
@@ -117,7 +119,10 @@ public class Sc_Case_808 : MonoBehaviour
                 }
             }
 
+
             IsOverlap = true;
+
+            
 
             PrévisualisationOn(GM.Connexion);
 
@@ -127,9 +132,17 @@ public class Sc_Case_808 : MonoBehaviour
             {
                 RotationPièce(1);   //on refait tourner la pièce
             }
+
+
         }
+        #endregion
 
 
+        #region sound
+
+        SD.PlaySoundFunction(0);
+
+        #endregion
     }
 
     public void OutOverlapping()
@@ -195,6 +208,11 @@ public class Sc_Case_808 : MonoBehaviour
             RotationPièce(x);   //on refait tourner la pièce
         }
 
+        #region sound
+        
+            SD.PlaySoundFunction(1);
+        #endregion
+
     }
     void Rot_Verif()
     {
@@ -219,9 +237,12 @@ public class Sc_Case_808 : MonoBehaviour
 
         GM.listintgModuleColors(true, color);
 
+
+
         if (!GM.Bombe)
         {
-            Sc_pds.vd_ApplyPoids(1);
+            Sc_pds.vd_ApplyPoids(1);                        
+            Point.GetComponent<Sc_Case_Point>().AddPoint(15 * rang, color);
         }
 
         else
@@ -267,6 +288,7 @@ public class Sc_Case_808 : MonoBehaviour
                     }
 
                 }
+
                 if (lst_Voisin[x].CompareTag ("Center"))
                 {
                     lst_DoubleCo.Add(lst_Voisin[x]);
@@ -278,6 +300,8 @@ public class Sc_Case_808 : MonoBehaviour
         
         Bomb = GM.Bombe;
         Model.GetComponent<Sc_3DEffect>().Case = gameObject;
+
+        SD.PlaySoundFunction(2);
 
         anim.ResetTrigger("Fall");
         anim.ResetTrigger("Explode");
@@ -347,43 +371,77 @@ public class Sc_Case_808 : MonoBehaviour
 
     public void Detonation()
     {
-        GM.Score(15*rang);
-
         if (Bomb)
         {
-            StartCoroutine( Model.GetComponent<Sc_3DEffect>().Explosion());
+            StartCoroutine(Model.GetComponent<Sc_3DEffect>().Explosion());
+
+            SD.PlaySoundFunction(3);
         }
     }
    
 
     public void Explosion()
     {
+        #region variables
+        List<GameObject> ColorChain = new List<GameObject>() ;
+        List<GameObject> Tofall = new List<GameObject>();
+        #endregion
+
+
+        #region Score
         GM.Combo();
+        Point.GetComponent<Sc_Case_Point>().AddPoint(100, color);
+        #endregion
+
 
         foreach (GameObject Go in lst_DoubleCo)
         {            
             if (!vérifiés.Contains(Go) & Go.tag == "Case")
             {
-                Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();  
-                
+                Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();
+
                 Go_Sc.vérifiés.Add(gameObject); //éviter les boucles infinies
                 
                 if (Bomb && Go_Sc.color == color)
                 {
                     GM.lst_comboDone.Clear();
-                    Go_Sc.Bomb = true;
-                    Go_Sc.Detonation();
+
+                    ColorChain.Add(Go);
                 }
 
                 else if (Bomb && Go_Sc.color != color)
                 {
-                    GM.lst_comboDone.Clear();                    
-                    Go_Sc.Ancrée(true, null);
+                    GM.lst_comboDone.Clear();
+                    
+
+                    if (Go_Sc.Ancrée(true, null) == false)
+                    {
+                        Tofall.Add(Go);
+                    }
                 }
+
+
             }
         }
+
+        foreach (GameObject Go in ColorChain)
+        {
+            Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();
+
+            Go_Sc.Bomb = true;
+
+            Go_Sc.Detonation();
+        }
+
+        foreach (GameObject Go in Tofall)
+        {
+
+        }
+
+
         vérifiés.Clear();
         Destrouir();
+
     }
  
     public void réequilibre()
@@ -482,7 +540,6 @@ public class Sc_Case_808 : MonoBehaviour
         #region disparition modèle
         OQP = false; Bomb = false;  color = 0;
 
-
         destroyConnexion();
 
         if (Model != null)
@@ -491,7 +548,6 @@ public class Sc_Case_808 : MonoBehaviour
         }
 
         resetfunction();
-
         #endregion
 
         foreach(GameObject Go in lst_connecté)
@@ -525,7 +581,5 @@ public class Sc_Case_808 : MonoBehaviour
 
         Posable = false;
     }
-
-    
 
 }

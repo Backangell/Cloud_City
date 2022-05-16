@@ -8,10 +8,16 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public float BombChance;
 
-    public GameObject Case, EndScreen;
+    public SC_Camembert Camembert;
 
+    public AudioSource Audio;
+    
+
+
+    public GameObject Case, EndScreen, Game;
+    public Sc_Mult Mult_Txt;
     public Sc_Overlay Overlay;
-    public Light light;
+    public Light lumiere;
 
     public List<GameObject> lst_Modules;
     public List<GameObject> lst_undead;
@@ -49,10 +55,11 @@ public class Sc_GameManager_808 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        play = false;
+
+        SetPlay(false);
         lost = false;
         score = 0;
+        combo_Mult = 1;
         HoldEmpty = true;
         NextBat();
         BatActualToNext();
@@ -63,6 +70,12 @@ public class Sc_GameManager_808 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        #region all frames
+        //center_Shad.SetInt(x);
+        #endregion
+
+
         if (Input.GetAxis("Mouse ScrollWheel") != 0 && Case != null) //fais toruner les cases
         {
             Case.GetComponent<Sc_Case_808>().RotationPièce(-Input.GetAxisRaw("Mouse ScrollWheel"));
@@ -78,7 +91,6 @@ public class Sc_GameManager_808 : MonoBehaviour
         {
             ReplaceNext();
         }
-
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -106,30 +118,23 @@ public class Sc_GameManager_808 : MonoBehaviour
             */
             #endregion
         }
+        
+    }
 
-        if (lost)
-        {
-            light.intensity= light.intensity + 2 ;
-        }
-
-        if (combo_Timer > 0)
-        {
-            combo_Timer--;
-        }
-        else
-        {
-            combo_Mult = 1;
-        }
+    public void ComboRest ()
+    {
+        combo_Mult = 1;
+        Mult_Txt.Mult_Txt(combo_Mult);
     }
 
     IEnumerator Begin()
     {
         yield return new WaitForSeconds(3);
-        play = true;
+        SetPlay(true);
     }
 
 
-    void ReplaceNext ()
+    void ReplaceNext()
     {
         NextBat();
     }
@@ -143,9 +148,6 @@ public class Sc_GameManager_808 : MonoBehaviour
         #endregion
 
         #region est une bombe? 
-
-        
-
 
         float B = Random.Range(0f, 1f); //bombe aléatoire
 
@@ -193,6 +195,7 @@ public class Sc_GameManager_808 : MonoBehaviour
 
         Overlay.Actuel(Connexion, couleurActuelle, Bombe);
         Overlay.Next(ProchaineConnexion, ProchaineCouleur, prochainEstBombe);
+
     }
 
     public void BatActualToNext() // remplace le 
@@ -257,12 +260,13 @@ public class Sc_GameManager_808 : MonoBehaviour
         Overlay.Hold(ConnexionHold, couleurHold, BombeHold);
     }    
 
-    public IEnumerator EndRoutine()
+    public void SetPlay(bool B)
     {
-        play = false;
-        yield return new WaitForSeconds(1);
-        Endscreen();
-        //SwitchScene(1);
+        play = B;
+    }
+    public void EndRoutine()
+    {
+        Game.GetComponent<Animator>().SetTrigger("End");        
     }
 
     public void SwitchScene(int x)
@@ -277,28 +281,24 @@ public class Sc_GameManager_808 : MonoBehaviour
         }
 
     }
-    void Endscreen()
+    public void Endscreen()
     {
-        //Debug.Log("end");
         SceneManager.LoadScene("Game Over");
     }
 
     public void Combo()
     {
-        combo_Mult++;         
-        combo_Timer = 600; //reset le timer
+        combo_Mult++;
+        Mult_Txt.Mult_Txt(combo_Mult);
+        
+        Camembert.LaunchTimer(); //reset le timer
     }
 
     public void Score(int x)
     {
-        score = score + (x * combo_Mult);      
-        if (combo_Mult > 1)
-        {
-            combo_Timer = 600; //reset le timer
-        }        
+        score += (x * combo_Mult);        
     }
-
-
+    
     public void listintgModuleColors(bool Add , int color)
     {
         if (Add)
@@ -312,4 +312,11 @@ public class Sc_GameManager_808 : MonoBehaviour
             lst_Modules_Color[0] -- ;
         }
     }
+
+
+
+
+
+
+
 }

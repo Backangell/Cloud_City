@@ -23,7 +23,7 @@ public class Sc_Score : MonoBehaviour
     {
         if (score < Sc_GameManager_808.score)
         {
-            score++;
+            score += GM.score-score;
         }
 
         Txt_Score.text = score.ToString();

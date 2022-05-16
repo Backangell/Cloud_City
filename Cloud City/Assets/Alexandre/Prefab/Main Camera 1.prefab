@@ -119,10 +119,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkNb: 0
   BombChance: 0.2
+  Camembert: {fileID: 0}
+  AudioEffect: {fileID: 0}
+  Lst_AudioS: []
   Case: {fileID: 0}
   EndScreen: {fileID: 0}
+  Mult_Txt: {fileID: 0}
   Overlay: {fileID: 0}
-  light: {fileID: 0}
+  lumiere: {fileID: 0}
   lst_Modules: []
   lst_undead:
   - {fileID: 0}
@@ -145,6 +149,7 @@ MonoBehaviour:
   combo_Timer: 0
   combo_Mult: 0
   score: 0
+  lst_Modules_Color: 
   Connexion: 
   couleurActuelle: 0
   Bombe: 0
@@ -202,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
+  GM: {fileID: 0}
 --- !u!1 &120408965423301398
 GameObject:
   m_ObjectHideFlags: 0

@@ -1497,7 +1497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2945293929739524405, guid: 73861f5b4a0b2664bb2978c907753903, type: 3}
       propertyPath: m_text
-      value: x2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2945293929739524405, guid: 73861f5b4a0b2664bb2978c907753903, type: 3}
       propertyPath: m_fontSize
@@ -5373,7 +5373,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170199332}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.12814438, y: -0.004301058, z: -0.13705479, w: 0.9822304}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5385,7 +5385,7 @@ Transform:
   - {fileID: 1195378755}
   m_Father: {fileID: 744758240}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -14.65, y: 1.58, z: -16.09}
 --- !u!4 &1175501079 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7608330830686602914, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}

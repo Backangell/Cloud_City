@@ -10,14 +10,14 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public SC_Camembert Camembert;
 
-    public AudioSource AudioEffect;
-    public List<AudioClip> Lst_AudioS;
+    public AudioSource Audio;
+    
 
 
     public GameObject Case, EndScreen;
     public Sc_Mult Mult_Txt;
     public Sc_Overlay Overlay;
-    public Light light;
+    public Light lumiere;
 
     public List<GameObject> lst_Modules;
     public List<GameObject> lst_undead;
@@ -118,7 +118,7 @@ public class Sc_GameManager_808 : MonoBehaviour
 
         if (lost)
         {
-            light.intensity= light.intensity + 2 ;
+            lumiere.intensity= lumiere.intensity + 2;
         }
 
     }
@@ -150,9 +150,6 @@ public class Sc_GameManager_808 : MonoBehaviour
         #endregion
 
         #region est une bombe? 
-
-        
-
 
         float B = Random.Range(0f, 1f); //bombe aléatoire
 
@@ -200,6 +197,7 @@ public class Sc_GameManager_808 : MonoBehaviour
 
         Overlay.Actuel(Connexion, couleurActuelle, Bombe);
         Overlay.Next(ProchaineConnexion, ProchaineCouleur, prochainEstBombe);
+
     }
 
     public void BatActualToNext() // remplace le 
@@ -273,7 +271,7 @@ public class Sc_GameManager_808 : MonoBehaviour
         SetPlay(false);
         yield return new WaitForSeconds(1);
         Endscreen();
-        //SwitchScene(1);
+
     }
 
     public void SwitchScene(int x)
@@ -290,7 +288,6 @@ public class Sc_GameManager_808 : MonoBehaviour
     }
     void Endscreen()
     {
-        //Debug.Log("end");
         SceneManager.LoadScene("Game Over");
     }
 
@@ -323,9 +320,8 @@ public class Sc_GameManager_808 : MonoBehaviour
 
 
 
-    public void PlaySoundFunction (int x)
-    {
-        AudioEffect.clip = Lst_AudioS[x];
-        AudioEffect.Play();
-    }
+
+
+
+
 }

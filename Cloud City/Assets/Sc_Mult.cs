@@ -6,14 +6,14 @@ using TMPro;
 public class Sc_Mult : MonoBehaviour
 {
     public Sc_GameManager_808 GM;
-    
+    public Animation anim;
     TextMeshPro Txt;
 
     // Start is called before the first frame update
     void Start()
     {
         Txt = GetComponent<TextMeshPro>();
-        Txt.text = "x" + GM.combo_Mult.ToString();
+        Txt.text = null;
         GM = Camera.main.GetComponent<Sc_GameManager_808>();
     }
 
@@ -25,6 +25,14 @@ public class Sc_Mult : MonoBehaviour
 
     public void Mult_Txt(int x)
     {
-        Txt.text ="x" +  x.ToString();
+        if (x == 1)
+        {
+            Txt.text = null;
+        }
+        else
+        {
+            Txt.text = "x" + x.ToString();
+            anim.Play();
+        }
     }
 }

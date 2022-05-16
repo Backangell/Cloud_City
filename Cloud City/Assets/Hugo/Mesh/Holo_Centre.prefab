@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 12827335782138423}
   - component: {fileID: 363286641402285909}
   - component: {fileID: 266419430566930821}
-  - component: {fileID: 4362627153206494028}
+  - component: {fileID: 7915461717911329231}
   m_Layer: 0
   m_Name: Combo_Jauge
   m_TagString: Untagged
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GM: {fileID: 0}
---- !u!111 &4362627153206494028
+--- !u!111 &7915461717911329231
 Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,6 +193,6 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: aacf66d8c78a0a14584095101a12a6c8, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0

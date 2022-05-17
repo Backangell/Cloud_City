@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GM: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!111 &1057356044318743537
 Animation:
   m_ObjectHideFlags: 0

@@ -25,7 +25,7 @@ public class Sc_GameManager_808 : MonoBehaviour
 
     public List<GameObject> lst_comboDone;
 
-    public bool combo, lost, play;
+    public bool combo, lost, play,azer;
     public int combo_Timer, combo_Mult, score;
 
     [Header("Module")]
@@ -115,7 +115,18 @@ public class Sc_GameManager_808 : MonoBehaviour
             */
             #endregion
         }
-        
+
+        if (lost)
+        {
+            if (lst_Case.Count != 0 & azer)
+            {
+                int x = Random.Range(0, lst_Case.Count);
+                lst_Case[x].GetComponent<Rigidbody>().useGravity = true;
+                lst_Case[x].GetComponent<Rigidbody>().AddForce(Vector3.down* 100,ForceMode.Impulse);
+                lst_Case.Remove(lst_Case[x]);
+            }
+            azer = !azer;
+        } 
     }
 
     public void ComboRest ()
@@ -263,7 +274,8 @@ public class Sc_GameManager_808 : MonoBehaviour
     }
     public void EndRoutine()
     {
-        Game.GetComponent<Animator>().SetTrigger("End");        
+        Game.GetComponent<Animator>().SetTrigger("End");
+        
     }
 
     public void SwitchScene(int x)

@@ -21,7 +21,7 @@ public class Sc_End : MonoBehaviour
     {
         if (!GM.lost)
         {
-            GM.lost = true;
+            //GM.lost = true;
             GM.EndRoutine();
         }
     }

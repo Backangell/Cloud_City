@@ -11,6 +11,7 @@ public class Sc_Case_808 : MonoBehaviour
     public bool OQP;        //il y a un module
     public bool Posable;    //les connexions sont bien relié
     public bool Bomb;
+    public bool VerifAncrage;
     
 
     ile_Poids Sc_pds;
@@ -237,8 +238,6 @@ public class Sc_Case_808 : MonoBehaviour
 
         GM.listintgModuleColors(true, color);
 
-
-
         if (!GM.Bombe)
         {
             Sc_pds.vd_ApplyPoids(1);                        
@@ -373,6 +372,8 @@ public class Sc_Case_808 : MonoBehaviour
     {
         if (Bomb)
         {
+            //print(gameObject + "détonation");
+
             StartCoroutine(Model.GetComponent<Sc_3DEffect>().Explosion());
 
             SD.PlaySoundFunction(3);
@@ -382,6 +383,7 @@ public class Sc_Case_808 : MonoBehaviour
 
     public void Explosion()
     {
+        //print(gameObject + "explose");
         #region variables
         List<GameObject> ColorChain = new List<GameObject>() ;
         List<GameObject> Tofall = new List<GameObject>();
@@ -395,9 +397,13 @@ public class Sc_Case_808 : MonoBehaviour
 
 
         foreach (GameObject Go in lst_DoubleCo)
-        {            
+        {
+            //print(gameObject + "vérifie la couleur de " + Go);
+
             if (!vérifiés.Contains(Go) & Go.tag == "Case")
             {
+                //print(Go + "n'as pas encore vérifier" + Go + " et le peut");
+
                 Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();
 
                 Go_Sc.vérifiés.Add(gameObject); //éviter les boucles infinies
@@ -407,14 +413,15 @@ public class Sc_Case_808 : MonoBehaviour
                     GM.lst_comboDone.Clear();
 
                     ColorChain.Add(Go);
+                    //print(gameObject + "added "+ Go + " in Colorchain");
                 }
 
                 else if (Bomb && Go_Sc.color != color)
                 {
-                    GM.lst_comboDone.Clear();
-                    
+                    //print(Go +"a une couleur différente");
+                    GM.lst_comboDone.Clear();                    
 
-                    if (Go_Sc.Ancrée(true, null) == false)
+                    if (Go_Sc.Ancrée(true, null,Go) == false)
                     {
                         Tofall.Add(Go);
                     }
@@ -429,6 +436,7 @@ public class Sc_Case_808 : MonoBehaviour
             Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();
             Go_Sc.Bomb = true;
             Go_Sc.Detonation();
+            //int(gameObject + "lance la détonation de" + Go);
         }
 
         foreach (GameObject Go in Tofall)
@@ -449,9 +457,14 @@ public class Sc_Case_808 : MonoBehaviour
     }
     
 
-    public bool Ancrée(bool original, GameObject parent)
+    public bool Ancrée(bool original, GameObject parent, GameObject First)
     {
-        
+        VerifAncrage = true;
+
+        if (parent !=null)
+        {
+        parent.GetComponent<Sc_Case_808>().vérifiés.Add(gameObject);
+        }
 
         GM.lst_comboDone.Add(gameObject);
 
@@ -465,47 +478,69 @@ public class Sc_Case_808 : MonoBehaviour
         {
             foreach (GameObject Go in lst_DoubleCo)
             {
+               
+                   print(gameObject + "récupère : " + Go);
+                   if (Go == First)
+                   {
+                       lst_enfant.Add(Go);
+                       parent.GetComponent<Sc_Case_808>().lst_enfant.Add(Go);
+                   }
 
-                if (Go.CompareTag ("Case") && !vérifiés.Contains(Go) & !GM.lst_comboDone.Contains(Go) && !Go.GetComponent<Sc_Case_808>().Bomb)
-                {
-                    Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();
-
-                    lst_enfant.Add(Go);
-
-
-                    Go_Sc.vérifiés.Add(gameObject);
-
-                    if (Go_Sc.Ancrée(false, gameObject) == true)
-                    {
-                        ancrée = true;
-
-                        foreach (GameObject go in lst_DoubleCo)
+                   else if (Go.CompareTag("Case") && !vérifiés.Contains(Go) & !GM.lst_comboDone.Contains(Go) && !Go.GetComponent<Sc_Case_808>().Bomb)
+                   {
+                        if (!Go.GetComponent<Sc_Case_808>().VerifAncrage)
                         {
-                            if (parent != null && !parent.GetComponent<Sc_Case_808>().lst_enfant.Contains(go))
+                            print(gameObject + "vérifie : " + Go);
+                           vérifiés.Add(Go);
+
+                           Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();
+
+                           lst_enfant.Add(Go);
+
+
+                           Go_Sc.vérifiés.Add(gameObject);
+
+                            if (Go_Sc.Ancrée(false, gameObject, First) == true)
                             {
-                                parent.GetComponent<Sc_Case_808>().lst_enfant.Add(go);
-                                
-                            }
-                        }
-                        GM.lst_comboDone.Clear();
-                        return ancrée;
-                    }
-                }
+                                ancrée = true;
 
-                else if (Go.CompareTag ("Center"))
-                {
-                    ancrée = true;
+                                foreach (GameObject go in lst_DoubleCo)
+                                {
+                                    if (parent != null && !parent.GetComponent<Sc_Case_808>().lst_enfant.Contains(go))
+                                    {
+                                        parent.GetComponent<Sc_Case_808>().lst_enfant.Add(go);
+                                    }
+                                }
+                                GM.lst_comboDone.Clear();
+                                vérifiés.Clear();
+                                //print("vérifié :" + vérifiés.Count);
 
-                    foreach (GameObject go in lst_enfant)
-                    {
-                        if (parent!= null && !parent.GetComponent<Sc_Case_808>().lst_enfant.Contains(go))
-                        {
-                            parent.GetComponent<Sc_Case_808>().lst_enfant.Add(go);
+                                VerifAncrage = false;
+                                return ancrée;
+
+                            }    
                         }
-                    }
-                    GM.lst_comboDone.Clear();
-                    return ancrée;
-                }
+                   }
+
+                   else if (Go.CompareTag("Center"))
+                   {
+                       ancrée = true;
+
+                       foreach (GameObject go in lst_enfant)
+                       {
+                           if (parent != null && !parent.GetComponent<Sc_Case_808>().lst_enfant.Contains(go))
+                           {
+                               parent.GetComponent<Sc_Case_808>().lst_enfant.Add(go);
+                           }
+                       }
+
+                       GM.lst_comboDone.Clear();
+                       vérifiés.Clear();
+                       //print("vérifié :" + vérifiés.Count);
+                       VerifAncrage = false;
+                       return ancrée;
+                   }
+                
             }
 
         }
@@ -513,10 +548,14 @@ public class Sc_Case_808 : MonoBehaviour
 
         if (!ancrée)
         {
-            anim.SetTrigger("Fall");            
+            anim.SetTrigger("Fall");       
         }
 
         GM.lst_comboDone.Clear();
+
+        vérifiés.Clear();
+        //print("vérifié :" + vérifiés.Count);
+        VerifAncrage = false;
         return ancrée;
     }
 
@@ -559,6 +598,9 @@ public class Sc_Case_808 : MonoBehaviour
 
         lst_connecté.Clear();
         lst_DoubleCo.Clear();
+        lst_enfant.Clear();
+        vérifiés.Clear();
+        //print("vérifié :" + vérifiés.Count);
 
         anim.SetTrigger("Reset");        
     }

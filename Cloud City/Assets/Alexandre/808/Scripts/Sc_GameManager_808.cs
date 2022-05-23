@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Sc_GameManager_808 : MonoBehaviour
 {
-    public int linkNb;
+    public int linkNb, score;
 
     public float BombChance;
 
@@ -26,7 +26,8 @@ public class Sc_GameManager_808 : MonoBehaviour
     public List<GameObject> lst_comboDone;
 
     public bool combo, lost, play,azer;
-    public int combo_Timer, combo_Mult, score;
+    public int combo_Timer, combo_Mult;
+    
 
     [Header("Module")]
     public  List<int> lst_Modules_Color;
@@ -180,7 +181,7 @@ public class Sc_GameManager_808 : MonoBehaviour
         }
         if (!prochainEstBombe)
         {
-            linkNb = (Random.Range(2, 7)); //Nombre de connexions
+            linkNb = (Random.Range(2, 5)); //Nombre de connexions
         }
 
         List<int> Xlist = new List<int>(); //génére la list des connexions

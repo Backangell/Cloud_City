@@ -451,8 +451,7 @@ public class Sc_Case_808 : MonoBehaviour
     }
  
     public void réequilibre()
-    {
-        
+    {        
         Sc_pds.vd_ApplyPoids(-1);
     }
     
@@ -479,7 +478,7 @@ public class Sc_Case_808 : MonoBehaviour
             foreach (GameObject Go in lst_DoubleCo)
             {
                
-                   print(gameObject + "récupère : " + Go);
+                   //print(gameObject + "récupère : " + Go);
                    if (Go == First)
                    {
                        lst_enfant.Add(Go);
@@ -490,7 +489,7 @@ public class Sc_Case_808 : MonoBehaviour
                    {
                         if (!Go.GetComponent<Sc_Case_808>().VerifAncrage)
                         {
-                            print(gameObject + "vérifie : " + Go);
+                           // print(gameObject + "vérifie : " + Go);
                            vérifiés.Add(Go);
 
                            Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();

@@ -251,11 +251,12 @@ MonoBehaviour:
   tipstext: {fileID: 1909650052}
   alphaCanvas: {fileID: 1909650054}
   tips:
-  - Ahhhhhhh
-  - EEEEhhhhhhhh
-  - Hiiiiiiiiiiiiiii
-  - Ohhhhhhhhhhh
-  - Uhhhhhhhhhh
+  - More you make combo faster, more you earn scores.
+  - The multiplier depends on numbers of pieces that you destroyed with bomb.
+  - The board takes a long time to balance itself, use it to your advantage!
+  - 'If you see a red signal out of the board, put some pieces on the opposite side
+    from the signal came from! '
+  - Try to avoid putting pieces randomly anywhere.
 --- !u!1 &56973471
 GameObject:
   m_ObjectHideFlags: 0
@@ -24398,11 +24399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'More you make combo faster, more you earn scores.
-
-
-    The multiplier
-    depends on numbers of pieces that you destroyed with bomb.'
+  m_text: Test1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b67d4295db2811e4d814e0852881a1b9, type: 2}
   m_sharedMaterial: {fileID: -4052564408040895179, guid: b67d4295db2811e4d814e0852881a1b9, type: 2}

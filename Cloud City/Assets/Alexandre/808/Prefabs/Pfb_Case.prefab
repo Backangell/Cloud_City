@@ -80,6 +80,7 @@ MonoBehaviour:
   OQP: 0
   Posable: 0
   Bomb: 0
+  VerifAncrage: 0
   color: 0
   rang: 0
   verif: {fileID: 7980144202691760820}
@@ -181,7 +182,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -766,7 +767,7 @@ PrefabInstance:
       objectReference: {fileID: 1814649603497838579}
     - target: {fileID: 4928391256284584685, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6097317499175142678, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_LocalPosition.z
@@ -894,7 +895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4928391256284584685, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7885188400654844900, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_Name
@@ -1037,7 +1038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4928391256284584685, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7885188400654844900, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_Name
@@ -1180,7 +1181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4928391256284584685, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7885188400654844900, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_Name
@@ -1311,7 +1312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4928391256284584685, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7885188400654844900, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_Name
@@ -1406,7 +1407,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4928391256284584685, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7885188400654844900, guid: 4dd5e023dd47d0941b42d712ba753596, type: 3}
       propertyPath: m_Name

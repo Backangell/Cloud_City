@@ -9,10 +9,7 @@ public class Sc_3DEffect : MonoBehaviour
     public bool Bombe;
 
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+   
 
     private void OnEnable()
     {
@@ -30,6 +27,7 @@ public class Sc_3DEffect : MonoBehaviour
         GetComponent<Animator>().SetTrigger("EXPLOSE");
         
         yield return new WaitForSeconds(0.5f);
+
         Case.GetComponent<Sc_Case_808>().Explosion();
     }
 

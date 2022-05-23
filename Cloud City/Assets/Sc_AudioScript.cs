@@ -25,6 +25,7 @@ public class Sc_AudioScript : MonoBehaviour
     {
         AudioEffect.clip = Lst_Audio[x];
         AudioEffect.Play();
+        
     }
 
     public void Playmusic()

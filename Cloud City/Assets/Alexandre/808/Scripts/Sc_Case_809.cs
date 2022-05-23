@@ -228,7 +228,7 @@ public class Sc_Case_809: MonoBehaviour
     #region Onclick
     public void OnClick()
     {
-        Sc_Case_808 Sc_Voisin;
+        Sc_Case_809 Sc_Voisin;
 
         GM.lst_Modules.Add(gameObject);
         OQP = true; IsOverlap = false;
@@ -256,7 +256,7 @@ public class Sc_Case_809: MonoBehaviour
                 if (lst_Voisin[x].CompareTag ( "Case" ))
                 {
 
-                    Sc_Voisin = lst_Voisin[x].GetComponent<Sc_Case_808>();
+                    Sc_Voisin = lst_Voisin[x].GetComponent<Sc_Case_809>();
 
                     if (Sc_Voisin.Dead)
                     {
@@ -272,16 +272,16 @@ public class Sc_Case_809: MonoBehaviour
                         Sc_Voisin.lst_seConnect.Add(gameObject);
                     }
 
-                    if (lst_Voisin[x].GetComponent<Sc_Case_808>().lst_connecté.Contains(gameObject))
+                    if (lst_Voisin[x].GetComponent<Sc_Case_809>().lst_connecté.Contains(gameObject))
                     {
                         lst_DoubleCo.Add(lst_Voisin[x]);
-                        lst_Voisin[x].GetComponent<Sc_Case_808>().lst_DoubleCo.Add(gameObject);
+                        lst_Voisin[x].GetComponent<Sc_Case_809>().lst_DoubleCo.Add(gameObject);
                         
-                        if (lst_Voisin[x].GetComponent<Sc_Case_808>().color == color)
+                        if (lst_Voisin[x].GetComponent<Sc_Case_809>().color == color)
                         {
                             lst_Connexion[x].GetComponent<Sc_connexion>().function(true, color);
-                            int i = lst_Voisin[x].GetComponent<Sc_Case_808>().lst_Voisin.IndexOf(gameObject);
-                            lst_Voisin[x].GetComponent<Sc_Case_808>().lst_Connexion[i].GetComponent<Sc_connexion>().function(true, color);
+                            int i = lst_Voisin[x].GetComponent<Sc_Case_809>().lst_Voisin.IndexOf(gameObject);
+                            lst_Voisin[x].GetComponent<Sc_Case_809>().lst_Connexion[i].GetComponent<Sc_connexion>().function(true, color);
                         }
                     }
 
@@ -371,6 +371,7 @@ public class Sc_Case_809: MonoBehaviour
     {
         if (Bomb)
         {
+            print(gameObject + "détonation");
             StartCoroutine(Model.GetComponent<Sc_3DEffect>().Explosion());
 
             SD.PlaySoundFunction(3);
@@ -380,6 +381,8 @@ public class Sc_Case_809: MonoBehaviour
 
     public void Explosion()
     {
+        print(gameObject + "explose");
+
         #region variables
         List<GameObject> ColorChain = new List<GameObject>() ;
         List<GameObject> Tofall = new List<GameObject>();
@@ -396,7 +399,7 @@ public class Sc_Case_809: MonoBehaviour
         {            
             if (!vérifiés.Contains(Go) & Go.tag == "Case")
             {
-                Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();
+                Sc_Case_809 Go_Sc = Go.GetComponent<Sc_Case_809>();
 
                 Go_Sc.vérifiés.Add(gameObject); //éviter les boucles infinies
                 
@@ -405,13 +408,13 @@ public class Sc_Case_809: MonoBehaviour
                     GM.lst_comboDone.Clear();
 
                     ColorChain.Add(Go);
+
                 }
 
                 else if (Bomb && Go_Sc.color != color)
                 {
                     GM.lst_comboDone.Clear();
                     
-
                     if (Go_Sc.Ancrée(true, null) == false)
                     {
                         Tofall.Add(Go);
@@ -424,10 +427,11 @@ public class Sc_Case_809: MonoBehaviour
 
         foreach (GameObject Go in ColorChain)
         {
-            Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();
+            Sc_Case_809 Go_Sc = Go.GetComponent<Sc_Case_809>();
 
             Go_Sc.Bomb = true;
 
+            
             Go_Sc.Detonation();
         }
 
@@ -466,9 +470,9 @@ public class Sc_Case_809: MonoBehaviour
             foreach (GameObject Go in lst_DoubleCo)
             {
 
-                if (Go.CompareTag ("Case") && !vérifiés.Contains(Go) & !GM.lst_comboDone.Contains(Go) && !Go.GetComponent<Sc_Case_808>().Bomb)
+                if (Go.CompareTag ("Case") && !vérifiés.Contains(Go) & !GM.lst_comboDone.Contains(Go) && !Go.GetComponent<Sc_Case_809>().Bomb)
                 {
-                    Sc_Case_808 Go_Sc = Go.GetComponent<Sc_Case_808>();
+                    Sc_Case_809 Go_Sc = Go.GetComponent<Sc_Case_809>();
 
                     lst_enfant.Add(Go);
 
@@ -481,9 +485,9 @@ public class Sc_Case_809: MonoBehaviour
 
                         foreach (GameObject go in lst_DoubleCo)
                         {
-                            if (parent != null && !parent.GetComponent<Sc_Case_808>().lst_enfant.Contains(go))
+                            if (parent != null && !parent.GetComponent<Sc_Case_809>().lst_enfant.Contains(go))
                             {
-                                parent.GetComponent<Sc_Case_808>().lst_enfant.Add(go);
+                                parent.GetComponent<Sc_Case_809>().lst_enfant.Add(go);
                                 
                             }
                         }
@@ -498,9 +502,9 @@ public class Sc_Case_809: MonoBehaviour
 
                     foreach (GameObject go in lst_enfant)
                     {
-                        if (parent!= null && !parent.GetComponent<Sc_Case_808>().lst_enfant.Contains(go))
+                        if (parent!= null && !parent.GetComponent<Sc_Case_809>().lst_enfant.Contains(go))
                         {
-                            parent.GetComponent<Sc_Case_808>().lst_enfant.Add(go);
+                            parent.GetComponent<Sc_Case_809>().lst_enfant.Add(go);
                         }
                     }
                     GM.lst_comboDone.Clear();
@@ -554,8 +558,8 @@ public class Sc_Case_809: MonoBehaviour
         {            
             if (Go.CompareTag("Case"))
             {
-                Go.GetComponent<Sc_Case_808>().lst_seConnect.Remove(gameObject);
-                //Go.GetComponent<Sc_Case_808>().resetfunction();
+                Go.GetComponent<Sc_Case_809>().lst_seConnect.Remove(gameObject);
+                //Go.GetComponent<Sc_Case_809>().resetfunction();
             }            
         }
 

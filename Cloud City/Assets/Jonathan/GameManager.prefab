@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7322963029804633894}
   - component: {fileID: 7322963029804633893}
+  - component: {fileID: 7899652148709156973}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -32,6 +33,32 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7322963029804633893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322963029804633892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ae11821303db048a0bae20de126e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  f_duration: 1
+  Starter: {fileID: 0}
+  lst_iles: []
+  gm_iles: {fileID: 0}
+  lst_Grid: []
+  gm_grid: {fileID: 0}
+  b_DoOnce: 1
+  i_difficulty: 1
+  b_ApplyRota: 0
+  b_bomber: 0
+  hit_voisins: []
+  go_start: {fileID: 0}
+  b_NewRotSystem: 1
+  b_GetinfoRotationONCE: 0
+--- !u!114 &7899652148709156973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

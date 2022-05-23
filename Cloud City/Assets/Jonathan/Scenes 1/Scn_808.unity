@@ -208,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -293,7 +293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -540,7 +540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -659,7 +659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -756,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -849,7 +849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -957,7 +957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -1202,7 +1202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -1302,7 +1302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -1387,7 +1387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -2459,7 +2459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -2969,7 +2969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -3062,7 +3062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -3155,7 +3155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -3248,7 +3248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -3343,7 +3343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -3436,7 +3436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -3706,7 +3706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -3804,7 +3804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -3889,7 +3889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -4051,7 +4051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -4149,7 +4149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -4301,7 +4301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -4463,7 +4463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -4548,7 +4548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -4654,7 +4654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -4739,7 +4739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -4837,7 +4837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -4922,7 +4922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -5015,7 +5015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -5105,7 +5105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -5290,7 +5290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -5388,7 +5388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -5534,7 +5534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -5619,7 +5619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -5791,7 +5791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -6020,7 +6020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -6179,7 +6179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -6313,7 +6313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -6398,7 +6398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -6632,7 +6632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -6721,7 +6721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -6900,7 +6900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -6995,7 +6995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -7137,7 +7137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -7322,7 +7322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -7420,7 +7420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -7749,7 +7749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -7844,7 +7844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -7952,7 +7952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -8050,7 +8050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -8135,7 +8135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -8220,7 +8220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager
@@ -8305,7 +8305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: f_monpoids
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7926702647165356697, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
       propertyPath: sc_gamemanager

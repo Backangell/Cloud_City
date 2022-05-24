@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b8d7701dfc2f83e4f992f726de900780
+guid: bdb84e5906b226048a31033ebd880106
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,17 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: MetalBlanc
-    second: {fileID: 2100000, guid: 3d9b4b68dd503ad41a046173690b4a5e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Rouge
-    second: {fileID: 2100000, guid: a3634572dfaea454fa13a2da35f1ac88, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Vitre
     second: {fileID: 2100000, guid: a3634572dfaea454fa13a2da35f1ac88, type: 2}
   materials:
     materialImportMode: 2

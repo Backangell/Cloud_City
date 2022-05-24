@@ -11,6 +11,7 @@ public class LoadLoader : MonoBehaviour
     public Slider slider;
     public TextMeshProUGUI progressText;
     public TextMeshProUGUI tipstext;
+    public TextMeshProUGUI LoadingText;
     public CanvasGroup alphaCanvas;
     public List<string> tips;
 
@@ -26,19 +27,31 @@ public class LoadLoader : MonoBehaviour
 
     }
 
-    IEnumerator LoadAsynchronously(int sceneIndex)
+     IEnumerator LoadAsynchronously(int sceneIndex)
     {
         yield return null;
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-
+        
         loadingScreen.SetActive(true);
+
+        operation.allowSceneActivation = false;
 
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / 0.9f);
 
-            if (progress > 1) progress = 1;
+           //if (progress > 1) progress = 1; 
+           if (progress >= .9f && !operation.allowSceneActivation)
+            {
+                LoadingText.text = "Press Any Key To Continue";
+
+                if (Input.anyKeyDown)
+                {
+                    operation.allowSceneActivation = true;
+                    Time.timeScale = 1f;
+                }
+            }
 
             slider.value = progress;
             progress = Mathf.Round(progress * 100f);

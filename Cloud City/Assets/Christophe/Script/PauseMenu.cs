@@ -40,11 +40,11 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
     }
 
-    public void Pause()
+     void Pause()
     {
         GM.play = false;
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
         GameIsPaused = true;
     }
     public void GoToMainMenu()

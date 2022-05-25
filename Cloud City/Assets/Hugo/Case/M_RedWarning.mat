@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_plateau
-  m_Shader: {fileID: -6465566751694194690, guid: 264b4df10a9e95448bc38f4df0f62921, type: 3}
+  m_Name: M_RedWarning
+  m_Shader: {fileID: -6465566751694194690, guid: 744316deeac544846b4426c71080d918, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -110,6 +110,7 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 15
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1

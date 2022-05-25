@@ -29,7 +29,7 @@ public class Sc_Case_808 : MonoBehaviour
 
     [Header("3D")]
     public List<GameObject> lst_Connexion;
-    public List<GameObject> lst_Module;
+    public List<GameObject> lst_Module, lst_Module_Ov;
 
     Animator anim;
 
@@ -63,9 +63,61 @@ public class Sc_Case_808 : MonoBehaviour
         
 
     }
+    public void SpawnModel()
+    {
+        Destroy(Model);
+
+        if (!GM.Bombe)
+        {
+            if (GM.couleurActuelle == 1)
+            {
+                color = 1;
+                Model = Instantiate(lst_Module[0], module.transform);
+
+            }
+            if (GM.couleurActuelle == 2)
+            {
+                color = 2;
+                Model = Instantiate(lst_Module[1], module.transform);
+            }
+            if (GM.couleurActuelle == 3)
+            {
+                color = 3;
+                Model = Instantiate(lst_Module[2], module.transform);
+            }
+            if (GM.couleurActuelle == 4)
+            {
+                color = 4;
+                Model = Instantiate(lst_Module[3], module.transform);
+            }
+        }
+
+        else
+        {
+            if (GM.couleurActuelle == 1)
+            {
+                color = 1;
+                Model = Instantiate(lst_Module[4], module.transform);
+            }
+            if (GM.couleurActuelle == 2)
+            {
+                color = 2;
+                Model = Instantiate(lst_Module[5], module.transform);
+            }
+            if (GM.couleurActuelle == 3)
+            {
+                color = 3;
+                Model = Instantiate(lst_Module[6], module.transform);
+            }
+            if (GM.couleurActuelle == 4)
+            {
+                color = 4;
+                Model = Instantiate(lst_Module[7], module.transform);
+            }
+        }
+    }
 
     #region Overlapping
-
     public void OnOverlap()
     {
         #region prévisualisation
@@ -76,23 +128,23 @@ public class Sc_Case_808 : MonoBehaviour
                 if (GM.couleurActuelle == 1)
                 {
                     color = 1;
-                    Model = Instantiate(lst_Module[0], module.transform);
+                    Model = Instantiate(lst_Module_Ov[0], module.transform);
 
                 }
                 if (GM.couleurActuelle == 2)
                 {
                     color = 2;
-                    Model = Instantiate(lst_Module[1], module.transform);
+                    Model = Instantiate(lst_Module_Ov[1], module.transform);
                 }
                 if (GM.couleurActuelle == 3)
                 {
                     color = 3;
-                    Model = Instantiate(lst_Module[2], module.transform);
+                    Model = Instantiate(lst_Module_Ov[2], module.transform);
                 }
                 if (GM.couleurActuelle == 4)
                 {
                     color = 4;
-                    Model = Instantiate(lst_Module[3], module.transform);
+                    Model = Instantiate(lst_Module_Ov[3], module.transform);
                 }
             }
 
@@ -101,22 +153,22 @@ public class Sc_Case_808 : MonoBehaviour
                 if (GM.couleurActuelle == 1)
                 {
                     color = 1;
-                    Model = Instantiate(lst_Module[4], module.transform);
+                    Model = Instantiate(lst_Module_Ov[4], module.transform);
                 }
                 if (GM.couleurActuelle == 2)
                 {
                     color = 2;
-                    Model = Instantiate(lst_Module[5], module.transform);
+                    Model = Instantiate(lst_Module_Ov[5], module.transform);
                 }
                 if (GM.couleurActuelle == 3)
                 {
                     color = 3;
-                    Model = Instantiate(lst_Module[6], module.transform);
+                    Model = Instantiate(lst_Module_Ov[6], module.transform);
                 }
                 if (GM.couleurActuelle == 4)
                 {
                     color = 4;
-                    Model = Instantiate(lst_Module[7], module.transform);
+                    Model = Instantiate(lst_Module_Ov[7], module.transform);
                 }
             }
 
@@ -231,6 +283,8 @@ public class Sc_Case_808 : MonoBehaviour
     #region Onclick
     public void OnClick()
     {
+        SpawnModel();
+
         Sc_Case_808 Sc_Voisin;
 
         GM.lst_Modules.Add(gameObject);

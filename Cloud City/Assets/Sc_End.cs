@@ -5,6 +5,8 @@ using UnityEngine;
 public class Sc_End : MonoBehaviour
 {
     public Sc_GameManager_808 GM;
+    public GameObject Warning;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +19,18 @@ public class Sc_End : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter (Collider other)
+    private void OnCollisionEnter (Collision other)
     {
-        if (!GM.lost)
-        {
-            //GM.lost = true;
-            GM.EndRoutine();
-        }
+        ContactPoint impact = other.contacts[0];
+        Warning.transform.position = (new Vector3(impact.point.x, 0, impact.point.z));
+        
+        Warning.SetActive(true);     
     }
 
+
+
+    private void OnCollisionExit(Collision other)
+    {
+        Warning.SetActive(false);
+    }
 }

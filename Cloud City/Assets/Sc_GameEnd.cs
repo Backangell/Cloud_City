@@ -27,5 +27,5 @@ public class Sc_GameEnd : MonoBehaviour
             Go.AddComponent<Rigidbody>();
         }
     }
-
+        
 }

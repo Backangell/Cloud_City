@@ -2376,6 +2376,27 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[0]
+      value: If the board is too unbalanced,you have a few seconds to rebalance it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[1]
+      value: Keep in mind that fallen gems do not earn points.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[2]
+      value: Place your gems in the way that they're well distributed on the board.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[3]
+      value: Making a long streak of explosion would be too risky. Be predictable
+        !
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[4]
+      value: Trying to place gems randomly anywhere isn't always a good take.
+      objectReference: {fileID: 0}
     - target: {fileID: 7258192883143097430, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_Type
       value: 0

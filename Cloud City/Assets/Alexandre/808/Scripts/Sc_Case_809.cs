@@ -10,7 +10,7 @@ public class Sc_Case_809: MonoBehaviour
     public bool IsOverlap;  //est déja selectionné
     public bool OQP;        //il y a un module
     public bool Posable;    //les connexions sont bien relié
-    public bool Bomb;
+    public bool Bomb,BombO;
     
 
     ile_Poids Sc_pds;
@@ -240,7 +240,7 @@ public class Sc_Case_809: MonoBehaviour
         if (!GM.Bombe)
         {
             Sc_pds.vd_ApplyPoids(1);                        
-            Point.GetComponent<Sc_Case_Point>().AddPoint(15 * rang, color);
+            Point.GetComponent<Sc_Case_Point>().AddPoint(15 * rang, color,false);
         }
 
         else
@@ -377,9 +377,9 @@ public class Sc_Case_809: MonoBehaviour
             SD.PlaySoundFunction(3);
         }
     }
-   
 
-    public void Explosion()
+
+    public void Explosion(bool original)
     {
         print(gameObject + "explose");
 
@@ -391,7 +391,7 @@ public class Sc_Case_809: MonoBehaviour
 
         #region Score
         GM.Combo();
-        Point.GetComponent<Sc_Case_Point>().AddPoint(100, color);
+        Point.GetComponent<Sc_Case_Point>().AddPoint(100, color,BombO);
         #endregion
 
 

@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Sc_Mult : MonoBehaviour
 {
     public Sc_GameManager_808 GM;
     public Animation anim;
-    TextMeshPro Txt;
+    public TextMeshProUGUI Txt;
 
     // Start is called before the first frame update
     void Start()
     {
-        Txt = GetComponent<TextMeshPro>();
-        Txt.text = null;
+        Txt = GetComponent<TextMeshProUGUI>();
+        Mult_Txt(1);
         GM = Camera.main.GetComponent<Sc_GameManager_808>();
     }
 
@@ -24,15 +25,8 @@ public class Sc_Mult : MonoBehaviour
     }
 
     public void Mult_Txt(int x)
-    {
-        if (x == 1)
-        {
-            Txt.text = null;
-        }
-        else
-        {
+    {  
             Txt.text = "x" + x.ToString();
             anim.Play();
-        }
     }
 }

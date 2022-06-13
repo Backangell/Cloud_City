@@ -16,31 +16,33 @@ public class Sc_Case_Point : MonoBehaviour
         Is = false;
     }
 
-    public void AddPoint(int X, int Col)
+    public void AddPoint(int X, int Col,bool Bomb)
     {
-        if (X == 15)
+        if (!Bomb)
         {
-            Point.fontSize = 25 + GM.combo_Mult;
-        }
-        else if (X == 30) 
-        {
-            Point.fontSize = 30 + GM.combo_Mult;
-        }
-        else if (X == 45)
-        {
-            Point.fontSize = 35 + GM.combo_Mult;
-        }
-        else
-        {
-            Point.fontSize = 40 + GM.combo_Mult * 2;
-        }
+            if (X == 15)
+            {
+                Point.fontSize = 25 + GM.combo_Mult;
+            }
+            else if (X == 30)
+            {
+                Point.fontSize = 30 + GM.combo_Mult;
+            }
+            else if (X == 45)
+            {
+                Point.fontSize = 35 + GM.combo_Mult;
+            }
+            else
+            {
+                Point.fontSize = 40 + GM.combo_Mult * 2;
+            }
 
+            Point.text = "+" + (X * GM.combo_Mult).ToString();
+            GM.Score(X);
+            gameObject.transform.rotation = Quaternion.Euler(90, 0, 0);
 
-        Point.text = "+" + (X*GM.combo_Mult).ToString();
-        GM.Score(X);
-        gameObject.transform.rotation = Quaternion.Euler(90, 0, 0);
-
-        StartCoroutine(PointFunction());
+            StartCoroutine(PointFunction());
+        }
     }
 
     private void ResetText()

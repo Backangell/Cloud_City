@@ -32,4 +32,5 @@ public class Sc_Game_object : MonoBehaviour
     {
         GM.Endscreen();
     }
+
 }

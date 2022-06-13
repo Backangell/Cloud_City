@@ -10,7 +10,7 @@ public class Sc_Case_808 : MonoBehaviour
     public bool IsOverlap;  //est déja selectionné
     public bool OQP;        //il y a un module
     public bool Posable;    //les connexions sont bien relié
-    public bool Bomb;
+    public bool Bomb,BombO;
     public bool VerifAncrage;
     
 
@@ -295,7 +295,7 @@ public class Sc_Case_808 : MonoBehaviour
         if (!GM.Bombe)
         {
             Sc_pds.vd_ApplyPoids(1);                        
-            Point.GetComponent<Sc_Case_Point>().AddPoint(15 * rang, color);
+            Point.GetComponent<Sc_Case_Point>().AddPoint(15 * rang, color,BombO);
         }
 
         else
@@ -352,6 +352,7 @@ public class Sc_Case_808 : MonoBehaviour
         }
         
         Bomb = GM.Bombe;
+        BombO = Bomb;
         Model.GetComponent<Sc_3DEffect>().Case = gameObject;
 
         SD.PlaySoundFunction(2);
@@ -445,8 +446,11 @@ public class Sc_Case_808 : MonoBehaviour
 
 
         #region Score
-        GM.Combo();
-        Point.GetComponent<Sc_Case_Point>().AddPoint(100, color);
+        if (!BombO)
+        {
+            GM.Combo();
+            Point.GetComponent<Sc_Case_Point>().AddPoint(100, color, BombO);
+        }
         #endregion
 
 
@@ -628,7 +632,7 @@ public class Sc_Case_808 : MonoBehaviour
         GM.listintgModuleColors(false, color);
 
         #region disparition modèle
-        OQP = false; Bomb = false;  color = 0;
+        OQP = false; Bomb = false;  color = 0; BombO = false;
 
         destroyConnexion();
 

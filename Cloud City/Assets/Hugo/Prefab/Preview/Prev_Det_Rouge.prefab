@@ -43577,6 +43577,7 @@ GameObject:
   - component: {fileID: 5333755136204861955}
   - component: {fileID: 5101927500776485646}
   - component: {fileID: 4275994900401587070}
+  - component: {fileID: 8666090714710154989}
   m_Layer: 0
   m_Name: Batiment
   m_TagString: Untagged
@@ -43649,6 +43650,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!111 &8666090714710154989
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2779366929473797139}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 3264adfc34efc4f49aca598b172a3f69, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3264adfc34efc4f49aca598b172a3f69, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &3288795120112995334
 GameObject:
   m_ObjectHideFlags: 0

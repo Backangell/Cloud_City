@@ -63,7 +63,7 @@ public class LoadLoader : MonoBehaviour
 
     void Tipsf()
     {
-        Debug.Log("oui");
+        //Debug.Log("oui");
         tipstext.text = tips[Random.Range(0, tips.Count)];
     }
 

@@ -7,8 +7,9 @@ using TMPro;
 public class Sc_Mult : MonoBehaviour
 {
     public Sc_GameManager_808 GM;
-    public Animation anim;
+    public Animator anim,Jauge_Anim;
     public TextMeshProUGUI Txt;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,16 @@ public class Sc_Mult : MonoBehaviour
 
     public void Mult_Txt(int x)
     {  
+        if (x != 1)
+        {
             Txt.text = "x" + x.ToString();
-            anim.Play();
+            anim.SetTrigger("Trigger");
+        }
+        else
+        {
+            Txt.text = null;
+        }
+            
+            //Jauge_Anim.SetTrigger("Trigger");
     }
 }

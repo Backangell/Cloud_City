@@ -6,14 +6,14 @@ public class SC_Camembert : MonoBehaviour
 {
     public Sc_GameManager_808 GM;
     
-    Animation Anim;
+    Animator Anim;
 
     bool IsTimer;
 
     // Start is called before the first frame update
     void Start()
     {
-        Anim = GetComponent<Animation>();
+        Anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,13 +24,12 @@ public class SC_Camembert : MonoBehaviour
     }
     public void LaunchTimer()
     {
-        Anim.Stop(); 
-        Anim.Play();
-        
+        Anim.SetTrigger("Trigger");
     }
 
     void EndCombo()
     {
+        Anim.ResetTrigger("Trigger");
         GM.ComboRest();
     }
 }

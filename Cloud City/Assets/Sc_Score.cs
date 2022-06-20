@@ -12,8 +12,6 @@ public class Sc_Score : MonoBehaviour
     int score;
 
 
-
-
     // Update is called once per frame
     void Update()
     {

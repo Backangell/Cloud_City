@@ -299,8 +299,7 @@ public class Sc_GameManager_808 : MonoBehaviour
     public void Combo()
     {
         combo_Mult++;
-        Mult_Txt.Mult_Txt(combo_Mult);
-        
+        Mult_Txt.Mult_Txt(combo_Mult);        
         Camembert.LaunchTimer(); //reset le timer
     }
 

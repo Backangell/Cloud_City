@@ -216,6 +216,17 @@ PrefabInstance:
       objectReference: {fileID: 1944670304}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
+--- !u!114 &25676146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 38162861845203292, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+  m_PrefabInstance: {fileID: 409471250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e011c73704986a48a253617f247705b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &30388317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1334,6 +1345,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 313334823873434260, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d781dc0614f83c04ca305c8959154f35, type: 2}
     - target: {fileID: 325841631857982845, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: GM
       value: 
@@ -8082,7 +8097,7 @@ PrefabInstance:
     - target: {fileID: 120408964282709290, guid: 4ae3521a97c743c418a4d9fcc44fe899, type: 3}
       propertyPath: Mult_Txt
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 25676146}
     - target: {fileID: 120408964282709290, guid: 4ae3521a97c743c418a4d9fcc44fe899, type: 3}
       propertyPath: Camembert
       value: 

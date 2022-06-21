@@ -24,7 +24,9 @@ public class SC_Camembert : MonoBehaviour
     }
     public void LaunchTimer()
     {
+        Anim.Play("Idle");
         Anim.SetTrigger("Trigger");
+        
     }
 
     void EndCombo()

@@ -481,6 +481,7 @@ MonoBehaviour:
   - If you hold a bomb, you can wait to have another one to make a great combo !
   - If the red dot at the center touches the red circle, the stabily warning will
     begin.
+  - Beware, if you block every connections, you can get several pieces stuck !
 --- !u!1 &56973471
 GameObject:
   m_ObjectHideFlags: 0

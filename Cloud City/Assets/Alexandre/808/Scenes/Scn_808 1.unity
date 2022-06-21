@@ -2374,7 +2374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: tips.Array.size
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: tips.Array.data[0]
@@ -2434,6 +2434,11 @@ PrefabInstance:
       propertyPath: tips.Array.data[11]
       value: If the red dot at the center touches the red circle, the stabily warning
         will begin.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[12]
+      value: Beware, if you block every connections, you can get several pieces stuck
+        !
       objectReference: {fileID: 0}
     - target: {fileID: 7258192883143097430, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_Type

@@ -17936,15 +17936,16 @@ MonoBehaviour:
   Lst_Instruction:
   - 'Hexabilis is about dropping colored pieces and making them explode without tilting
     the board too much. '
-  - 'Overlap a case to select it, Use your molette to rotate it, Left click to pose
-    a piece. right click to hold the current piece.  '
-  - 'Pieces has different parameters, the color, the connexions and if it is a bomb '
-  - 'Chaincolor are made by connecting 2 pieces with the same color '
-  - 'Bomb are exploding itself and all the colorchain connected to it '
-  - 'The farest of the center, the piece have been posed, the most point you got.
-    Each Explosion are increasing the multiplicator by 1 during 6 second. '
-  - the further from the center the piece has been placed, the heavier it will be.When
-    the stability is lost, you have 3 seconds to stabilise the board before losing.
+  - 'Overlap a case to select it, Use your wheel to rotate them, Left click to place
+    a piece. right click to keep back the current piece.  '
+  - 'Pieces have different parameters, the color, the connexions and if it is a bomb '
+  - 'Chaincolor are made by connecting differents pieces with the same color '
+  - 'Bomb explode themself and all the colorchain connected to it giving points and
+    increasing the multiplier. '
+  - 'The further from the center the piece has been placed, the most point you got.
+    Explosions gave points and increase the multiplicator by 1 during 6 second. '
+  - 'the further from the center the piece has been placed, the heavier it will be.When
+    the stability is lost, you have 3 seconds to stabilise the board before losing. '
   CurrentNumber: 0
   titre: {fileID: 1464021791}
   Instruction: {fileID: 1871351206}

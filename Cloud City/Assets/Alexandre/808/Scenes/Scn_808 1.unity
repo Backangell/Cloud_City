@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999946, b: 0.99999946, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1450,6 +1450,10 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Mult:'
       objectReference: {fileID: 0}
+    - target: {fileID: 411881243821154733, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 636455713392725389, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1469,6 +1473,18 @@ PrefabInstance:
     - target: {fileID: 839359382456453751, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -22
+      objectReference: {fileID: 0}
+    - target: {fileID: 959194350000506078, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 959194350000506078, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 959194350000506078, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1070432379344986517, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_Layer
@@ -1508,6 +1524,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1267261560762454366, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288625194047503766, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1312210854464965946, guid: 422c296590fafc34a8b19837892c9008, type: 3}
@@ -1656,6 +1676,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2556061871259672695, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2556061871259672695, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2602987840540184463, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: GM
       value: 
@@ -1740,6 +1768,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 3612934447489416314, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641408644282176524, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641408644282176524, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3690638911853200922, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: GM
       value: 
@@ -1763,6 +1803,14 @@ PrefabInstance:
     - target: {fileID: 3975273151594175495, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -498
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038105814805679643, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038105814805679643, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4142212039787986719, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_RootOrder
@@ -2186,6 +2234,18 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 73.56
       objectReference: {fileID: 0}
+    - target: {fileID: 4923651928399297094, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923651928399297094, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923651928399297094, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5007908363300930278, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -761
@@ -2201,6 +2261,34 @@ PrefabInstance:
     - target: {fileID: 5082301546566808038, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328992673079359214, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_colorMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328992673079359214, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_fontColorGradient.bottomLeft.b
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328992673079359214, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_fontColorGradient.bottomLeft.g
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328992673079359214, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_fontColorGradient.bottomLeft.r
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328992673079359214, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_fontColorGradient.bottomRight.b
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328992673079359214, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_fontColorGradient.bottomRight.g
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328992673079359214, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_fontColorGradient.bottomRight.r
+      value: 0.2924528
       objectReference: {fileID: 0}
     - target: {fileID: 5457267939267992501, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2250,6 +2338,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6606825434946841642, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_text
+      value: Show controls IN GAME
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606825434946841642, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6642135695440024101, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_text
       value: 'Keep the board stable !
@@ -2260,6 +2356,14 @@ PrefabInstance:
       propertyPath: GM
       value: 
       objectReference: {fileID: 963194229}
+    - target: {fileID: 6884089664278621854, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884089664278621854, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6915900481433359224, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: GM
       value: 
@@ -2267,6 +2371,69 @@ PrefabInstance:
     - target: {fileID: 7043408123245950699, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[0]
+      value: The faster you make combos, the more score you earn.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[1]
+      value: The multiplier depends on numbers of pieces that you destroy with bomb.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[2]
+      value: The board takes a long time to balance itself, use it to your advantage!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[3]
+      value: 'If you see a red signal out of the board, put some pieces on the opposite
+        side from where the signal come from! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[4]
+      value: Try to avoid putting pieces randomly anywhere.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[5]
+      value: "Overlap a case to select it, use your wheel to rotate a piece, left
+        click to place it and right click to hold the current piece in the \u201Chold\u201D
+        slot.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[6]
+      value: 'Pieces have different parameters : the color, the connexions and if
+        it is a bomb or not. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[7]
+      value: 'Each piece you place give a small amount of points, increasing with
+        the distance from the center. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[8]
+      value: 'Explosions of give 100 points and increase the multiplicator by 1.
+        The multiplicator number is applied to every point, and lasts 6 seconds after
+        the last explosion. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[9]
+      value: 'he further from the center a piece is placed, the heavier it will be.
+        When the stability is lost, you have 3 seconds to stabilise the board before
+        losing. This duration decrease passed 50 000 points. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[10]
+      value: If you hold a bomb, you can wait to have another one to make a great
+        combo !
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057217069156390502, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: tips.Array.data[11]
+      value: If the red dot at the center touches the red circle, the stabily warning
+        will begin.
       objectReference: {fileID: 0}
     - target: {fileID: 7258192883143097430, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_Type
@@ -2291,6 +2458,14 @@ PrefabInstance:
     - target: {fileID: 7864038848209105504, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999518732343424542, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_SortingOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999518732343424542, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8004122161135411941, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_text

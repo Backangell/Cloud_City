@@ -41,7 +41,31 @@ public class Sc_Warning : MonoBehaviour
 
     private void OnEnable()
     {
-        Timer = 3;
+        if (GM.score < 200000)
+        {
+
+            Timer = 1;
+        }
+        if (GM.score < 150000)
+        {
+
+            Timer = 1.5f;
+        }
+        if (GM.score < 100000)
+        {
+
+            Timer = 2;
+        }
+        if (GM.score < 50000)
+        {
+
+            Timer = 2.5f;
+        }
+        else if (GM.score<0)
+        {
+
+            Timer = 3;
+        }
         IsActive = true;
     }
 

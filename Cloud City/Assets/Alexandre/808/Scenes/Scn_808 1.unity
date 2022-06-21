@@ -1003,6 +1003,7 @@ MonoBehaviour:
   GM: {fileID: 963194229}
   Warning: {fileID: 2132263594}
   Bool: 1
+  Sound: {fileID: 0}
 --- !u!54 &283282687
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1741,6 +1742,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 3245682364112405921, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3245682364112405921, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341163341282134745, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_BlockingObjects
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3690638911853200922, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: GM
       value: 
@@ -2136,6 +2149,10 @@ PrefabInstance:
     - target: {fileID: 4296780669771644157, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 450.43408
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308046953347636660, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4441103715808211104, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_IsActive
@@ -2711,9 +2728,11 @@ MonoBehaviour:
   Lst_Audio:
   - {fileID: 8300000, guid: 08594f7938459654787e9d65a7405aaa, type: 3}
   - {fileID: 8300000, guid: 7f8d22110f66bb341b8a2da2da02c811, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 690dea33e0d137b43915faa72a001051, type: 3}
   - {fileID: 8300000, guid: 395bf6a5e7c250646a6512fa785d3c3d, type: 3}
   - {fileID: 8300000, guid: 8a3ab6d04cae6f44aa575ebe87acc6a9, type: 3}
+  - {fileID: 8300000, guid: 7fdc03e2be252264099b37c76c8c7cb2, type: 3}
+  - {fileID: 8300000, guid: 690dea33e0d137b43915faa72a001051, type: 3}
   - {fileID: 8300000, guid: 7fdc03e2be252264099b37c76c8c7cb2, type: 3}
 --- !u!82 &553377103
 AudioSource:
@@ -2985,6 +3004,7 @@ MonoBehaviour:
   GM: {fileID: 963194229}
   Warning: {fileID: 1423285478}
   Bool: 0
+  Sound: {fileID: 0}
 --- !u!65 &560381549
 BoxCollider:
   m_ObjectHideFlags: 0

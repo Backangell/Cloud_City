@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999946, b: 0.99999946, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3040,11 +3040,11 @@ MonoBehaviour:
   Lst_Audio:
   - {fileID: 8300000, guid: 08594f7938459654787e9d65a7405aaa, type: 3}
   - {fileID: 8300000, guid: 7f8d22110f66bb341b8a2da2da02c811, type: 3}
-  - {fileID: 8300000, guid: 690dea33e0d137b43915faa72a001051, type: 3}
+  - {fileID: 8300000, guid: 99118fdced6acdc47badbb959c5783be, type: 3}
   - {fileID: 8300000, guid: 395bf6a5e7c250646a6512fa785d3c3d, type: 3}
   - {fileID: 8300000, guid: 8a3ab6d04cae6f44aa575ebe87acc6a9, type: 3}
   - {fileID: 8300000, guid: 7fdc03e2be252264099b37c76c8c7cb2, type: 3}
-  - {fileID: 8300000, guid: 690dea33e0d137b43915faa72a001051, type: 3}
+  - {fileID: 8300000, guid: 99118fdced6acdc47badbb959c5783be, type: 3}
   - {fileID: 8300000, guid: 7fdc03e2be252264099b37c76c8c7cb2, type: 3}
 --- !u!82 &553377103
 AudioSource:
@@ -14230,6 +14230,10 @@ PrefabInstance:
       propertyPath: Txt
       value: 
       objectReference: {fileID: 1870002025}
+    - target: {fileID: 731202853789450346, guid: f3c6d8a2c1c60d749a27beb2eb452507, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ebce219f5bf7d94a93065171c000e8c, type: 3}
     - target: {fileID: 2067778705386976189, guid: f3c6d8a2c1c60d749a27beb2eb452507, type: 3}
       propertyPath: m_Name
       value: Warning

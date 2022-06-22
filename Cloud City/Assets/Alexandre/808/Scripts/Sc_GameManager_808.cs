@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Sc_GameManager_808 : MonoBehaviour
 {
-    public int linkNb, score;
+    public int linkNb; 
+    public  int score;
 
     public float BombChance;
 

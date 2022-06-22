@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999946, b: 0.99999946, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2966,6 +2966,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+--- !u!1 &499802888 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7322963029804633892, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
+  m_PrefabInstance: {fileID: 499802887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &499802889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499802888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30a62711a8cd5f541b154c976a266bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &515022676 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7608330830686602914, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
@@ -3709,6 +3726,78 @@ PrefabInstance:
       objectReference: {fileID: 1944670304}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
+--- !u!1 &668049122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 668049123}
+  - component: {fileID: 668049124}
+  m_Layer: 0
+  m_Name: NewProfile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &668049123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668049122}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 305.43668, y: 238.77391, z: 0.9439087}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &668049124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668049122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e113366240b90d84fa7fe6685bb2f6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  i_score: 0
+  str_name: 
+  str_rang: 
+  GM_808: {fileID: 963194229}
+  i_rankGod: 0
+  i_rankMaster: 0
+  i_rankPGM: 0
+  i_rankElite: 0
+  txtpro_name: {fileID: 0}
+  txtpro_grade: {fileID: 0}
+  txtpro_score: {fileID: 0}
+  go_GameOver: {fileID: 0}
+  go_Highscore: {fileID: 0}
+  b_DoOnce: 1
+  b_Reset: 0
+  txtpro_ProfileName: {fileID: 0}
+  txtpro_ProfilScore: {fileID: 0}
+  txtpro_ProfilRang: {fileID: 0}
+  go_Score_1: {fileID: 0}
+  go_Score_2: {fileID: 0}
+  go_Score_3: {fileID: 0}
+  go_Score_4: {fileID: 0}
+  go_Score_5: {fileID: 0}
+  go_Score_6: {fileID: 0}
+  go_Score_7: {fileID: 0}
+  go_Score_8: {fileID: 0}
+  go_Score_9: {fileID: 0}
+  go_Score_10: {fileID: 0}
+  i_tmpScore: 0
 --- !u!4 &668513143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7608330830686602914, guid: 56f361b3bc2a7494d93cd434d4887127, type: 3}
@@ -12897,7 +12986,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7322963029804633893, guid: db0f942e15ae2e14295e36fbb0ddb3ae, type: 3}
   m_PrefabInstance: {fileID: 499802887}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 499802888}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16ae11821303db048a0bae20de126e3d, type: 3}

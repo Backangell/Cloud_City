@@ -17,18 +17,18 @@ public class LoadLoader : MonoBehaviour
 
     void Start ()
     {
-        Tipsf();
+        Tipsf();        
     }
 
     
-    public void Button_Start(int sceneIndex)
+    public void Button_Start (int sceneIndex)
     {
         StartCoroutine(LoadAsynchronously(sceneIndex));
-
     }
 
      IEnumerator LoadAsynchronously(int sceneIndex)
-    {
+     {
+        Debug.Log("ok");
         yield return null;
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
@@ -54,6 +54,7 @@ public class LoadLoader : MonoBehaviour
             }
 
             slider.value = progress;
+            
             progress = Mathf.Round(progress * 100f);
             progressText.text = progress + "%";
 

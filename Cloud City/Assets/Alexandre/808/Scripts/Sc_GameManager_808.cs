@@ -85,12 +85,12 @@ public class Sc_GameManager_808 : MonoBehaviour
         {
             Case.GetComponent<Sc_Case_808>().OnClick();
         }
-
+        /*
         if (Input.GetMouseButtonDown(2))
         {
             ReplaceNext();
         }
-
+        */
         if (Input.GetMouseButtonDown(1))
         {
             #region HoldPiece

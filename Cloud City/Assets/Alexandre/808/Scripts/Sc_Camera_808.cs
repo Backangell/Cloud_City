@@ -54,6 +54,10 @@ public class Sc_Camera_808 : MonoBehaviour
                     GM.Selection(hit.collider.gameObject); //rajoute l'objet comme étant selectionné.
                 }
             }
+
+
+
+
             //else
             //{
             //    GM.Selection(null);
@@ -64,6 +68,10 @@ public class Sc_Camera_808 : MonoBehaviour
         {
             GM.Selection(null);//rajoute l'objet comme étant selectionné.
         }*/
+    }
+    public void pause()
+    {
+        GM.Selection(null);
     }
 
 }

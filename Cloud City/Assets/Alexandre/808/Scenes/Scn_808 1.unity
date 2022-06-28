@@ -2482,6 +2482,10 @@ PrefabInstance:
       propertyPath: GM
       value: 
       objectReference: {fileID: 963194229}
+    - target: {fileID: 6702120621697153056, guid: 422c296590fafc34a8b19837892c9008, type: 3}
+      propertyPath: MainCamera
+      value: 
+      objectReference: {fileID: 636192117}
     - target: {fileID: 6884089664278621854, guid: 422c296590fafc34a8b19837892c9008, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

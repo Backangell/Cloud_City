@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
-    public GameObject pauseMenuUI;
+    public GameObject pauseMenuUI, MainCamera;
     public Sc_GameManager_808 GM;
 
     void Start()
@@ -42,6 +42,7 @@ public class PauseMenu : MonoBehaviour
 
      void Pause()
     {
+        MainCamera.GetComponent<Sc_Camera_808>().pause();
         GM.play = false;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
@@ -52,4 +53,5 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
+
 }
